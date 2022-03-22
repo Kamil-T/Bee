@@ -1,8 +1,14 @@
 #upperSection {
-  padding-left: 195px;
-  padding-right: 195px;
+  padding-left: 10.15%;
+  padding-right: 10.15%;
   background-image: url('../images/UpperSectionBg.svg');
   background-position: top;
+}
+
+#honey {
+  background-image: url('../images/Honey.svg');
+  background-position: -28px 55px;
+  background-repeat: no-repeat;
 }
 
 #letitbee {
@@ -11,7 +17,6 @@
 
 #bigBee {
   align-self: center;
-  position: bottom;
   position: absolute;
   bottom: -10px;
   z-index: 3;
