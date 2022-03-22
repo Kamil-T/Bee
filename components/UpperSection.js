@@ -12,12 +12,12 @@ import ArrowY from '../images/ArrowY.svg'
 import Discord from '../images/DiscordIcon.svg'
 import Twitter from '../images/TwitterIcon.svg'
 import Instagram from '../images/InstagramIcon.svg'
-import styled from '../styles/UpperSection.module.css'
+import styles from '../styles/UpperSection.module.css'
 
 const UpperSection = () => {
   return (
     <Container
-      id={styled.upperSection}
+      id={styles.upperSection}
       maxWidth='false'
       sx={{
         minHeight: '1037px',
@@ -38,11 +38,11 @@ const UpperSection = () => {
             ' linear-gradient(81.29deg, #FFA232 11.63%, #FFD977 80.12%)',
           borderRadius: '32px',
         }}>
-        <div id={styled.letitbee}>
+        <div id={styles.letitbee}>
           <Image src={LetItBee} alt='' />
         </div>
         <Box
-          id={styled.honey}
+          id={styles.honey}
           maxWidth='911.7px'
           sx={{
             height: '552px',
@@ -148,7 +148,7 @@ const UpperSection = () => {
         </Box>
       </Box>
 
-      <div id={styled.bigBee}>
+      <div id={styles.bigBee}>
         <Image src={BigBee} alt='' />
       </div>
     </Container>

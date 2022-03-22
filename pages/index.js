@@ -1,4 +1,5 @@
 import Container from '@mui/material/Container'
+import BeesUtilities from '../components/BeesUtilities'
 import UpperSection from '../components/UpperSection'
 
 export default function Index() {
@@ -11,6 +12,7 @@ export default function Index() {
         flexDirection: 'column',
       }}>
       <UpperSection />
+      <BeesUtilities />
     </Container>
   )
 }
