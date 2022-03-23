@@ -42,7 +42,6 @@ const BeesTraits = () => {
         <Typography
           sx={{
             fontFamily: 'Montserrat',
-            fontWeight: '400',
             fontSize: '20px',
             lineHeight: '32px',
             letterSpacing: '0.01em',
@@ -53,7 +52,7 @@ const BeesTraits = () => {
         </Typography>
       </Box>
       <Box>
-        
+
       </Box>
     </Container>
   )

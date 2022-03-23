@@ -38,7 +38,6 @@ const Xyz = () => {
           width: '341px',
           fontFamily: 'Montserrat',
           fontSize: '14px',
-          fontWeight: '400',
           lineHeight: '24px',
           letterSpacing: '0.01em',
           paddingLeft: '24px',
