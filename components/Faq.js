@@ -4,10 +4,12 @@ import Paper from '@mui/material/Paper'
 import Accordion from '@mui/material/Accordion/'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
+import Box from '@mui/material/Box'
 import ArrowY from '../images/ArrowY.svg'
 import styles from '../styles/Faq.module.css'
 import Image from 'next/image'
 import frequentlyAskedQuestion from '../faq'
+import OurCommunity from './OurCommunity'
 
 const Faq = () => {
   const faq = frequentlyAskedQuestion
@@ -21,6 +23,7 @@ const Faq = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        justifyContent: 'center',
       }}>
       <Typography
         sx={{
@@ -89,6 +92,10 @@ const Faq = () => {
         }}>
         Our community
       </Typography>
+
+      <Box sx={{ justifySelf: 'flex-end' }}>
+        <OurCommunity />
+      </Box>
     </Container>
   )
 }
