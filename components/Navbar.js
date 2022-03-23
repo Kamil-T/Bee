@@ -2,9 +2,11 @@ import Stack from '@mui/material/Stack'
 import MenuItem from '@mui/material/MenuItem'
 import Button from '@mui/material/Button'
 import { styled } from '@mui/material/styles'
+import Link from '../src/Link'
 
 const Navbar = () => {
-  const MenuItemStyled = styled(MenuItem)(() => ({
+  const LinkStyled = styled(Link)(() => ({
+    all: 'unset',
     fontFamily: 'Montserrat',
     fontWeight: '500',
     paddingLeft: '24px',
@@ -17,12 +19,13 @@ const Navbar = () => {
     <Stack
       flexDirection='row'
       justifyContent='flex-end'
+      alignItems='center'
       sx={{ py: '34px', px: '45px' }}>
-      <MenuItemStyled component='nav'>About us</MenuItemStyled>
-      <MenuItemStyled component='nav'>Yetis</MenuItemStyled>
-      <MenuItemStyled component='nav'>Story</MenuItemStyled>
-      <MenuItemStyled component='nav'>Wishlist</MenuItemStyled>
-      <MenuItemStyled component='nav'>Roadmap</MenuItemStyled>
+      <LinkStyled href=''>About us</LinkStyled>
+      <LinkStyled href=''>Yetis</LinkStyled>
+      <LinkStyled href=''>Story</LinkStyled>
+      <LinkStyled href=''>Wishlist</LinkStyled>
+      <LinkStyled href='#roadMap'>Roadmap</LinkStyled>
       <Button
         sx={{
           width: '158px',

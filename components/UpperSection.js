@@ -12,6 +12,7 @@ import ArrowY from '../images/ArrowY.svg'
 import Discord from '../images/DiscordIcon.svg'
 import Twitter from '../images/TwitterIcon.svg'
 import Instagram from '../images/InstagramIcon.svg'
+import Link from '../src/Link'
 import styles from '../styles/UpperSection.module.css'
 
 const UpperSection = () => {
@@ -135,15 +136,21 @@ const UpperSection = () => {
             </Typography>
           </Stack>
           <Stack direction='row' justifyContent='space-between' width='196px'>
-            <IconButton aria-label='discord'>
-              <Image src={Discord} />
-            </IconButton>
-            <IconButton aria-label='twitter'>
-              <Image src={Twitter} />
-            </IconButton>
-            <IconButton aria-label='instagram'>
-              <Image src={Instagram} />
-            </IconButton>
+            <Link href='https://discord.com/'>
+              <IconButton aria-label='discord'>
+                <Image src={Discord} />
+              </IconButton>
+            </Link>
+            <Link href='https://twitter.com/'>
+              <IconButton aria-label='twitter'>
+                <Image src={Twitter} />
+              </IconButton>
+            </Link>
+            <Link href='https://instagram.com/'>
+              <IconButton aria-label='instagram'>
+                <Image src={Instagram} />
+              </IconButton>
+            </Link>
           </Stack>
         </Box>
       </Box>

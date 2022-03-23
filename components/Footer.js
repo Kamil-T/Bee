@@ -4,6 +4,7 @@ import Container from '@mui/material/Container'
 const Footer = () => {
   return (
     <Container
+      component='footer'
       maxWidth='false'
       sx={{
         display: 'flex',
