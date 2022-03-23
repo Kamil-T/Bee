@@ -1,5 +1,9 @@
 import Container from '@mui/material/Container'
+import BeesTraits from '../components/BeesTraits'
 import BeesUtilities from '../components/BeesUtilities'
+import Faq from '../components/Faq'
+import Footer from '../components/Footer'
+import RoadMap from '../components/RoadMap'
 import UpperSection from '../components/UpperSection'
 
 export default function Index() {
@@ -13,6 +17,10 @@ export default function Index() {
       }}>
       <UpperSection />
       <BeesUtilities />
+      <BeesTraits />
+      <RoadMap />
+      <Faq />
+      <Footer />
     </Container>
   )
 }

@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 
 const Xyz = () => {
@@ -19,8 +19,6 @@ const Xyz = () => {
           borderRadius: '16px',
           transform: 'rotate(-2.41deg)',
           border: '2px solid',
-          borderImageSource:
-            'linear-gradient(180deg, #DB8116 0%, #F6AD0B 100%)',
         }}>
         <Typography
           sx={{
