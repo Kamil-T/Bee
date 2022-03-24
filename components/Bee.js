@@ -1,4 +1,6 @@
 import Box from '@mui/material/Box'
+import Image from 'next/image'
+import beeGlasses from '../images/beeglasses.png'
 import styles from '../styles/Bee.module.css'
 
 const Bee = () => {
@@ -6,18 +8,46 @@ const Bee = () => {
     <Box
       id={styles.beesbg}
       display='flex'
-      flexWrap='wrap'
+      flexDirection='column'
       maxWidth='1440px'
+      width='100%'
+      height='100%'
       justifyContent='space-between'>
-      <Box width='265.5px' height='277.5px' paddingX='18.68px'></Box>
-      <Box width='265.5px' height='277.5px' paddingX='18.68px'></Box>
-      <Box width='265.5px' height='277.5px' paddingX='18.68px'></Box>
-      <Box width='265.5px' height='277.5px' paddingX='18.68px'></Box>
-      <Box width='265.5px' height='277.5px' paddingX='18.68px'></Box>
-      <Box width='265.5px' height='277.5px' paddingX='18.68px'></Box>
-      <Box width='265.5px' height='277.5px' paddingX='18.68px'></Box>
-      <Box width='265.5px' height='277.5px' paddingX='18.68px'></Box>
-      <Box width='265.5px' height='277.5px' paddingX='18.68px'></Box>
+      <Box display='flex' justifyContent='center' marginTop='25px'>
+        <Box maxWidth='265.5px' maxHeight='277.5px' marginX='11px'>
+          <Image src={beeGlasses} />
+        </Box>
+        <Box maxWidth='265.5px' maxHeight='277.5px' marginX='11px'>
+          <Image src={beeGlasses} />
+        </Box>
+        <Box maxWidth='265.5px' maxHeight='277.5px' marginX='11px'>
+          <Image src={beeGlasses} />
+        </Box>
+        <Box maxWidth='265.5px' maxHeight='277.5px' marginX='11px'>
+          <Image src={beeGlasses} />
+        </Box>
+        <Box maxWidth='265.5px' maxHeight='277.5px' marginX='11px'>
+          <Image src={beeGlasses} />
+        </Box>
+      </Box>
+      <Box
+        display='flex'
+        alignSelf='center'
+        marginTop='-33px'
+        marginBottom='30px'>
+        <Box maxWidth='265.5px' maxHeight='277.5px' marginX='11px'>
+          <Image src={beeGlasses} />
+        </Box>
+        <Box maxWidth='265.5px' maxHeight='277.5px' marginX='11px'>
+          <Image src={beeGlasses} />
+        </Box>
+        <Box maxWidth='265.5px' maxHeight='277.5px' marginX='11px'>
+          <Image src={beeGlasses} />
+        </Box>
+        <Box maxWidth='265.5px' maxHeight='277.5px' marginX='11px'>
+          <Image src={beeGlasses} />
+        </Box>
+      </Box>
     </Box>
   )
 }

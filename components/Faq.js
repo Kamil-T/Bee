@@ -18,15 +18,16 @@ const Faq = () => {
       id={styles.faq}
       maxWidth='false'
       sx={{
-        paddingTop: '92px',
+        paddingBottom: '80px',
         minHeight: '1320px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
       }}>
       <Typography
         sx={{
+          marginTop: '92px',
           fontFamily: 'Clash Grotesk',
           fontWeight: '700',
           fontSize: '64px',
@@ -40,13 +41,14 @@ const Faq = () => {
           flexDirection: 'column',
           alignItems: 'center',
           minWidth: '952px',
-          marginTop: '44px',
+          marginY: '70px',
           boxShadow: '0px 16px 32px rgba(0, 0, 0, 0.25)',
           borderRadius: '24px',
         }}>
-        {faq.map(({ question, answer }) => {
+        {faq.map(({ question, answer }, index) => {
           return (
             <Accordion
+              key={index}
               disableGutters
               sx={{ maxWidth: '888px', paddingY: '30px', boxShadow: 'none' }}>
               <AccordionSummary
@@ -84,16 +86,17 @@ const Faq = () => {
       </Paper>
       <Typography
         sx={{
+          paddingY: '25px',
           fontFamily: 'Clash Grotesk',
           fontWeight: '700',
           fontSize: '64px',
+          lineHeight: '64px',
           color: '#8A4A00',
-          marginTop: '132px',
         }}>
         Our community
       </Typography>
 
-      <Box sx={{ justifySelf: 'flex-end' }}>
+      <Box sx={{ paddingRight: '5px' }}>
         <OurCommunity />
       </Box>
     </Container>

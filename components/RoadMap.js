@@ -12,23 +12,23 @@ const RoadMap = () => {
       maxWidth='false'
       sx={{
         display: 'flex',
-        justifyContent: 'center',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
         minHeight: '1254px',
         paddingTop: '96px',
         background: '#DB8116',
       }}>
       <Box display='flex' flexDirection='column'>
-        <Phase text={'1'} />
-        <Phase text={'3'} />
-      </Box>
-      <Box>
         <Typography
           sx={{
+            marginBottom: '15px',
             fontFamily: 'Clash Grotesk',
             fontWeight: '600',
             fontSize: '24px',
             lineHeight: '24px',
             color: '#8A4A00',
+            letterSpacing: '0em',
           }}>
           Lorem ipsum dolor sit amet
         </Typography>
@@ -39,15 +39,35 @@ const RoadMap = () => {
             fontSize: '64px',
             lineHeight: '64px',
             color: 'white',
+            letterSpacing: '0em',
           }}>
           Road map
         </Typography>
-        <Box alignSelf='center'>
+      </Box>
+      <Box display='flex' height='925px'>
+        <Box
+          display='flex'
+          flexDirection='column'
+          justifyContent='space-between'>
+          <Phase text={'1'} />
+          <Phase text={'3'} />
+        </Box>
+        <Box
+          height='100%'
+          display='flex'
+          flexDirection='column'
+          alignSelf='center'
+          paddingTop='65px'
+          paddingX='113px'>
           <Image src={roadMap} />
         </Box>
-      </Box>
-      <Box display='flex'>
-        <Phase text={'2'} />
+        <Box
+          display='flex'
+          flexDirection='column'
+          justifyContent='center'
+          alignItems='center'>
+          <Phase text={'2'} />
+        </Box>
       </Box>
     </Container>
   )

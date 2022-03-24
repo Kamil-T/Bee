@@ -3,10 +3,11 @@ import Typography from '@mui/material/Typography'
 
 const Phase = ({ text }) => {
   return (
-    <Box display='flex' flexDirection='column' height='317px'>
+    <Box display='flex' flexDirection='column' height='317px' marginTop='60px'>
       <Box
         display='flex'
         sx={{
+          alignSelf: 'center',
           justifyContent: 'center',
           background: '#E9A00A',
           width: '327.8px',

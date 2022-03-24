@@ -21,10 +21,10 @@ const Navbar = () => {
       justifyContent='flex-end'
       alignItems='center'
       sx={{ py: '34px', px: '45px' }}>
-      <LinkStyled href=''>About us</LinkStyled>
-      <LinkStyled href=''>Yetis</LinkStyled>
-      <LinkStyled href=''>Story</LinkStyled>
-      <LinkStyled href=''>Wishlist</LinkStyled>
+      <LinkStyled href='/'>About us</LinkStyled>
+      <LinkStyled href='/'>Yetis</LinkStyled>
+      <LinkStyled href='/'>Story</LinkStyled>
+      <LinkStyled href='/'>Wishlist</LinkStyled>
       <LinkStyled href='#roadMap'>Roadmap</LinkStyled>
       <Button
         sx={{

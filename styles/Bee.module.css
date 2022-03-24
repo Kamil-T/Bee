@@ -1,4 +1,5 @@
 #beesbg {
   background-image: url('../images/Beesbg.svg');
   background-repeat: no-repeat;
+  background-size: contain;
 }
