@@ -3,7 +3,7 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Xyz from './Xyz'
 import styles from '../styles/BeesUtilities.module.css'
-import Bee from './Bee'
+import Bees from './Bees'
 
 const BeesUtilities = () => {
   return (
@@ -15,7 +15,7 @@ const BeesUtilities = () => {
         flexDirection: 'column',
         alignItems: 'center',
         background: '#FFC55E',
-        paddingY: '111px',
+        paddingTop: '111px',
         zIndex: '5',
       }}>
       <Typography
@@ -42,11 +42,11 @@ const BeesUtilities = () => {
         }}>
         Bees utilities
       </Typography>
-      <div id={styles.xyz}>
+      <Box marginBottom='90px' id={styles.xyz}>
         <Xyz />
         <Xyz />
-      </div>
-      <Bee />
+      </Box>
+      <Bees />
     </Container>
   )
 }
