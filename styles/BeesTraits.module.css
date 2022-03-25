@@ -1,3 +1,16 @@
 #beesTraits {
   background-image: url('../images/BeesTraitsBg.svg');
 }
+
+#beesTraitsBee {
+  background-image: url('../images/beesTraitsbeebg.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.traitBg {
+  background-image: url('../images/traitBg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

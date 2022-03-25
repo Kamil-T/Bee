@@ -1,6 +1,14 @@
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
+import ArrowIcon from '../images/ArrowX.svg'
+import Image from 'next/image'
+import beesTraitsBee from '../images/beesTraitsBee.png'
+import glasses from '../images/glasses.png'
+import gun from '../images/gun.png'
+import wings from '../images/wings.png'
+import hat from '../images/hat.png'
 import styles from '../styles/BeesTraits.module.css'
 
 const BeesTraits = () => {
@@ -10,15 +18,18 @@ const BeesTraits = () => {
       id={styles.beesTraits}
       sx={{
         display: 'flex',
+        justifyContent: 'center',
         alignItems: 'center',
+        gap: '15px',
         minHeight: '997px',
         background: '#8A4A00',
       }}>
       <Box
         display='flex'
         flexDirection='column'
-        width='341px'
-        sx={{ marginBottom: '70px', marginLeft: '216px' }}>
+        maxWidth='341px'
+        marginBottom='70px'
+        marginRight='30px'>
         <Typography
           sx={{
             fontFamily: 'Clash Grotesk',
@@ -51,8 +62,79 @@ const BeesTraits = () => {
           purus eget nisl efficitur, at porttitor ex accumsan.
         </Typography>
       </Box>
-      <Box>
-
+      <Box display='flex' flexDirection='column' alignItems='center'>
+        <Box marginTop='50px' marginLeft='40px' id={styles.beesTraitsBee}>
+          <Image src={beesTraitsBee} />
+        </Box>
+        <Box
+          marginTop='-75px'
+          marginLeft='30px'
+          display='flex'
+          alignItems='center'>
+          <Box>
+            <Image src={ArrowIcon} />
+          </Box>
+          <Button
+            sx={{
+              height: '76px',
+              marginX: '32px',
+              padding: '25.5px 32px 28px 30.5px',
+              borderRadius: '16px',
+              backgroundColor: '#DB8216',
+              transform: 'matrix(1, -0.03, 0.03, 1, 0, 0)',
+            }}>
+            <Typography
+              sx={{
+                fontFamily: 'Clash Grotesk',
+                fontWeight: '700',
+                fontSize: '32px',
+                lineHeight: '32px',
+                color: 'white',
+                transform: 'matrix(1, 0.03, -0.03, 1, 0, 0)',
+                textTransform: 'none',
+              }}>
+              Hats - lot of them!
+            </Typography>
+          </Button>
+          <Box sx={{ marginBottom: '10px', transform: 'rotate(180deg)' }}>
+            <Image src={ArrowIcon} />
+          </Box>
+        </Box>
+        <Typography
+          sx={{
+            marginLeft: '32px',
+            marginTop: '17px',
+            maxWidth: '493px',
+            fontFamily: 'Montserrat',
+            fontSize: '14px',
+            fontWeight: '500',
+            lineHeight: '24px',
+            letterSpacing: '0.01em',
+            textAlign: 'center',
+            color: 'white',
+          }}>
+          Duis egestas rutrum erat vel finibus. Lorem ipsum dolor. Donec dapibus
+          purus eget nisl efficitur, at porttitor ex accumsan.
+        </Typography>
+      </Box>
+      <Box display='flex' flexDirection='column' alignItems='center'>
+        <Box>
+          <Image
+            className={styles.traitBg}
+            src={glasses}
+            width={139}
+            height={119}
+          />
+          <Image className={styles.traitBg} src={hat} height={119} />
+          <Image className={styles.traitBg} src={wings} height={119} />
+        </Box>
+        <Box>
+          <Image className={styles.traitBg} src={hat} height={119} />
+          <Image className={styles.traitBg} src={gun} height={119} />
+        </Box>
+        <Box>
+          <Image className={styles.traitBg} src={hat} height={119} />
+        </Box>
       </Box>
     </Container>
   )
