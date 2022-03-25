@@ -31,6 +31,7 @@ const Phase = ({ text }) => {
       <Box maxWidth='341px' marginTop='17px'>
         <Typography
           sx={{
+            marginLeft: '5px',
             fontFamily: 'Montserrat',
             fontWeight: '700',
             fontSize: '20px',
@@ -42,6 +43,8 @@ const Phase = ({ text }) => {
         </Typography>
         <Typography
           sx={{
+            marginLeft: '5px',
+            marginTop: '15px',
             fontFamily: 'Montserrat',
             fontWeight: '500',
             fontSize: '14px',

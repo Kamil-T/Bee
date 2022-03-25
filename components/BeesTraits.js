@@ -118,7 +118,7 @@ const BeesTraits = () => {
         </Typography>
       </Box>
       <Box display='flex' flexDirection='column' alignItems='center'>
-        <Box>
+        <Box display='flex' wrap='nowrap'>
           <Image
             className={styles.traitBg}
             src={glasses}
@@ -128,11 +128,11 @@ const BeesTraits = () => {
           <Image className={styles.traitBg} src={hat} height={119} />
           <Image className={styles.traitBg} src={wings} height={119} />
         </Box>
-        <Box>
+        <Box display='flex' wrap='nowrap'>
           <Image className={styles.traitBg} src={hat} height={119} />
           <Image className={styles.traitBg} src={gun} height={119} />
         </Box>
-        <Box>
+        <Box display='flex' wrap='nowrap'>
           <Image className={styles.traitBg} src={hat} height={119} />
         </Box>
       </Box>

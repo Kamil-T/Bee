@@ -54,11 +54,12 @@ const RoadMap = () => {
         </Box>
         <Box
           height='100%'
+          minWidth='50px'
           display='flex'
           flexDirection='column'
           alignSelf='center'
           paddingTop='65px'
-          paddingX='113px'>
+          marginX='113px'>
           <Image src={roadMap} />
         </Box>
         <Box
