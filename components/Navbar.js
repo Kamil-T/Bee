@@ -16,38 +16,43 @@ const Navbar = () => {
     fontWeight: '500',
     paddingLeft: '24px',
     paddingRight: '24px',
-    fontSize: { xs: '12px', sm: '16px' },
+    fontSize: '16px',
     color: 'black',
+  }))
+
+  const MenuItemStyled = styled(MenuItem)(() => ({
+    paddingRight: '0px',
+    paddingLeft: '0px',
   }))
 
   const Links = () => {
     return (
       <>
-        <MenuItem>
+        <MenuItemStyled>
           <LinkStyled onClick={handleClose} href='/'>
             About us
           </LinkStyled>
-        </MenuItem>
-        <MenuItem>
+        </MenuItemStyled>
+        <MenuItemStyled>
           <LinkStyled onClick={handleClose} href='/'>
             Yetis
           </LinkStyled>
-        </MenuItem>
-        <MenuItem>
+        </MenuItemStyled>
+        <MenuItemStyled>
           <LinkStyled onClick={handleClose} href='/'>
             Story
           </LinkStyled>
-        </MenuItem>
-        <MenuItem>
+        </MenuItemStyled>
+        <MenuItemStyled>
           <LinkStyled onClick={handleClose} href='/'>
             Wishlist
           </LinkStyled>
-        </MenuItem>
-        <MenuItem>
+        </MenuItemStyled>
+        <MenuItemStyled>
           <LinkStyled onClick={handleClose} href='#roadMap'>
             Roadmap
           </LinkStyled>
-        </MenuItem>
+        </MenuItemStyled>
       </>
     )
   }
@@ -110,7 +115,7 @@ const Navbar = () => {
           fontFamily: 'Satoshi',
           letterSpacing: '0.01rem',
           fontWeight: '900',
-          marginLeft: '24px',
+          marginLeft: { xs: '0px', lg: '24px' },
         }}>
         MINT BEE
       </Button>
