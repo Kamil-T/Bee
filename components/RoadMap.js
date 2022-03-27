@@ -19,13 +19,13 @@ const RoadMap = () => {
         paddingTop: '96px',
         background: '#DB8116',
       }}>
-      <Box display='flex' flexDirection='column'>
+      <Box display='flex' flexDirection='column' alignItems='center'>
         <Typography
           sx={{
             marginBottom: '15px',
             fontFamily: 'Clash Grotesk',
             fontWeight: '600',
-            fontSize: '24px',
+            fontSize: { xs: '20px', sm: '22px', md: '24px' },
             lineHeight: '24px',
             color: '#8A4A00',
             letterSpacing: '0em',
@@ -36,7 +36,7 @@ const RoadMap = () => {
           sx={{
             fontFamily: 'Clash Grotesk',
             fontWeight: '700',
-            fontSize: '64px',
+            fontSize: { xs: '44px', sm: '52px', md: '58px', lg: '64px' },
             lineHeight: '64px',
             color: 'white',
             letterSpacing: '0em',
@@ -44,7 +44,7 @@ const RoadMap = () => {
           Road map
         </Typography>
       </Box>
-      <Box display='flex' height='925px'>
+      <Box display='flex' height='925px' justifyContent='center'>
         <Box
           display='flex'
           flexDirection='column'
@@ -59,7 +59,7 @@ const RoadMap = () => {
           flexDirection='column'
           alignSelf='center'
           paddingTop='65px'
-          marginX='113px'>
+          marginX='6vw'>
           <Image src={roadMap} />
         </Box>
         <Box

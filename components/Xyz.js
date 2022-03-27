@@ -4,11 +4,15 @@ import Typography from '@mui/material/Typography'
 const Xyz = () => {
   return (
     <Box
-      width='464px'
+      maxWidth='464px'
       display='flex'
       justifyContent='space-between'
-      marginX='23px 0'>
+      alignItems='center'
+      sx={{ flexDirection: { xs: 'column', md: 'row' } }}>
       <Box
+        marginY='20px'
+        marginRight='24px'
+        paddingX='24px'
         sx={{
           display: 'flex',
           justifyContent: 'center',
@@ -35,12 +39,11 @@ const Xyz = () => {
       </Box>
       <Typography
         sx={{
-          width: '341px',
+          maxWidth: '341px',
           fontFamily: 'Montserrat',
           fontSize: '14px',
           lineHeight: '24px',
           letterSpacing: '0.01em',
-          paddingLeft: '24px',
         }}>
         Duis egestas rutrum erat vel finibus. Lorem ipsum dolor. Donec dapibus
         purus eget nisl efficitur, at porttitor ex accumsan.

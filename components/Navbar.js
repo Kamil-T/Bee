@@ -1,8 +1,13 @@
 import Stack from '@mui/material/Stack'
-import MenuItem from '@mui/material/MenuItem'
 import Button from '@mui/material/Button'
-import { styled } from '@mui/material/styles'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import { styled, useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import IconButton from '@mui/material/IconButton'
+import MenuIcon from '@mui/icons-material/Menu'
 import Link from '../src/Link'
+import { useState } from 'react'
 
 const Navbar = () => {
   const LinkStyled = styled(Link)(() => ({
@@ -11,21 +16,89 @@ const Navbar = () => {
     fontWeight: '500',
     paddingLeft: '24px',
     paddingRight: '24px',
-    fontSize: '16px',
+    fontSize: { xs: '12px', sm: '16px' },
     color: 'black',
   }))
+
+  const Links = () => {
+    return (
+      <>
+        <MenuItem>
+          <LinkStyled onClick={handleClose} href='/'>
+            About us
+          </LinkStyled>
+        </MenuItem>
+        <MenuItem>
+          <LinkStyled onClick={handleClose} href='/'>
+            Yetis
+          </LinkStyled>
+        </MenuItem>
+        <MenuItem>
+          <LinkStyled onClick={handleClose} href='/'>
+            Story
+          </LinkStyled>
+        </MenuItem>
+        <MenuItem>
+          <LinkStyled onClick={handleClose} href='/'>
+            Wishlist
+          </LinkStyled>
+        </MenuItem>
+        <MenuItem>
+          <LinkStyled onClick={handleClose} href='#roadMap'>
+            Roadmap
+          </LinkStyled>
+        </MenuItem>
+      </>
+    )
+  }
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.down('md'))
+
+  const [anchorEl, setAnchorEl] = useState(null)
+  const open = Boolean(anchorEl)
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget)
+  }
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
 
   return (
     <Stack
       flexDirection='row'
       justifyContent='flex-end'
       alignItems='center'
-      sx={{ py: '34px', px: '45px' }}>
-      <LinkStyled href='/'>About us</LinkStyled>
-      <LinkStyled href='/'>Yetis</LinkStyled>
-      <LinkStyled href='/'>Story</LinkStyled>
-      <LinkStyled href='/'>Wishlist</LinkStyled>
-      <LinkStyled href='#roadMap'>Roadmap</LinkStyled>
+      sx={{ py: { xs: '15px', md: '34px' }, px: { xs: '20px', md: '45px' } }}>
+      {matches ? (
+        <>
+          <Button
+            id='basic-button'
+            aria-controls={open ? 'basic-menu' : undefined}
+            aria-haspopup='true'
+            aria-expanded={open ? 'true' : undefined}
+            onClick={handleClick}>
+            <IconButton
+              size='large'
+              edge='center'
+              aria-label='open drawer'
+              sx={{ color: '#DB8216' }}>
+              <MenuIcon />
+            </IconButton>
+          </Button>
+          <Menu
+            id='basic-menu'
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            MenuListProps={{
+              'aria-labelledby': 'basic-button',
+            }}>
+            <Links />
+          </Menu>
+        </>
+      ) : (
+        <Links />
+      )}
       <Button
         sx={{
           width: '158px',
@@ -33,7 +106,7 @@ const Navbar = () => {
           background: '#8A4A00',
           borderRadius: '100px',
           color: '#FFDE73',
-          fontSize: '16px',
+          fontSize: { xs: '12px', md: '16px' },
           fontFamily: 'Satoshi',
           letterSpacing: '0.01rem',
           fontWeight: '900',

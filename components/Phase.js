@@ -3,14 +3,13 @@ import Typography from '@mui/material/Typography'
 
 const Phase = ({ text }) => {
   return (
-    <Box display='flex' flexDirection='column' height='317px' marginTop='60px'>
+    <Box display='flex' flexDirection='column' marginTop='60px'>
       <Box
         display='flex'
         sx={{
           alignSelf: 'center',
           justifyContent: 'center',
           background: '#E9A00A',
-          width: '327.8px',
           height: '76px',
           borderRadius: '16px',
           transform: 'matrix(1, -0.03, 0.03, 1, 0, 0)',
@@ -19,7 +18,8 @@ const Phase = ({ text }) => {
           sx={{
             fontFamily: 'Clash Grotesk',
             fontWeight: '700',
-            fontSize: '32px',
+            fontSize: { xs: '14px', sm: '20px', md: '28px', lg: '32px' },
+            paddingX: { xs: '2.5em', sm: '3.25em' },
             lineHeight: '32px',
             color: '#FFFFFF',
             transform: 'matrix(1, 0.03, 0, 1, 0, 0)',
@@ -34,7 +34,7 @@ const Phase = ({ text }) => {
             marginLeft: '5px',
             fontFamily: 'Montserrat',
             fontWeight: '700',
-            fontSize: '20px',
+            fontSize: { xs: '13px', sm: '16px', md: '18px', lg: '20px' },
             lineHeight: '32px',
             letterSpacing: '0.01em',
             color: 'white',
@@ -47,7 +47,7 @@ const Phase = ({ text }) => {
             marginTop: '15px',
             fontFamily: 'Montserrat',
             fontWeight: '500',
-            fontSize: '14px',
+            fontSize: { xs: '12px', md: '13px', lg: '14px' },
             lineHeight: '24px',
             letterSpacing: '0.01em',
             color: 'white',

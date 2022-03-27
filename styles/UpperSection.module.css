@@ -1,23 +1,10 @@
 #upperSection {
-  padding-left: 10.15%;
-  padding-right: 10.15%;
   background-image: url('../images/UpperSectionBg.svg');
-  background-position: top;
+  background-position: center top;
 }
 
-#honey {
+/* #honey {
   background-image: url('../images/Honey.svg');
-  background-position: -28px 55px;
   background-repeat: no-repeat;
-}
-
-#letitbee {
-  margin-top: 33px;
-}
-
-#bigBee {
-  align-self: center;
-  position: absolute;
-  bottom: -10px;
-  z-index: 3;
-}
+  background-position: 0px 10px;
+} */

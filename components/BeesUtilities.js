@@ -2,7 +2,6 @@ import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Xyz from './Xyz'
-import styles from '../styles/BeesUtilities.module.css'
 import Bees from './Bees'
 
 const BeesUtilities = () => {
@@ -22,7 +21,7 @@ const BeesUtilities = () => {
         sx={{
           fontFamily: 'Clash Grotesk',
           fontWeight: '600',
-          fontSize: '24px',
+          fontSize: { xs: '20px', sm: '24px' },
           lineHeight: '24px',
           color: 'white',
           marginTop: '28px',
@@ -35,14 +34,22 @@ const BeesUtilities = () => {
         sx={{
           fontFamily: 'Clash Grotesk',
           fontWeight: '700',
-          fontSize: '64px',
+          fontSize: { xs: '44px', sm: '58px', md: '64px' },
           margin: '16px 0 70px 6px',
           lineHeight: '64px',
           letterSpacing: '0.001rem',
         }}>
         Bees utilities
       </Typography>
-      <Box marginBottom='90px' id={styles.xyz}>
+      <Box
+        marginBottom='80px'
+        display='flex'
+        maxWidth='1000px'
+        justifyContent='space-between'
+        sx={{
+          flexDirection: { xs: 'column', md: 'row' },
+          gap: { xs: '35px', md: '70px' },
+        }}>
         <Xyz />
         <Xyz />
       </Box>
