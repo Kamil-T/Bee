@@ -73,6 +73,7 @@ const Navbar = () => {
       flexDirection='row'
       justifyContent='flex-end'
       alignItems='center'
+      marginRight='8vw'
       sx={{ py: { xs: '15px', md: '34px' }, px: { xs: '20px', md: '45px' } }}>
       {matches ? (
         <>
