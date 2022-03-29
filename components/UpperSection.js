@@ -5,6 +5,8 @@ import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
 import IconButton from '@mui/material/IconButton'
+import { useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import Image from 'next/image'
 import LetItBee from '../images/letitbee.svg'
 import BigBee from '../images/bigbee.png'
@@ -12,16 +14,18 @@ import ArrowY from '../images/ArrowY.svg'
 import Discord from '../images/DiscordIcon.svg'
 import Twitter from '../images/TwitterIcon.svg'
 import Instagram from '../images/InstagramIcon.svg'
-import Link from '../src/Link'
 import styles from '../styles/UpperSection.module.css'
 
 const UpperSection = () => {
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.up('md'))
+
   return (
     <Container
       id={styles.upperSection}
       maxWidth='false'
       sx={{
-        minHeight: '1037px',
+        minHeight: { xs: '185vw', sm: '1000px', md: '1037px' },
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
@@ -35,12 +39,12 @@ const UpperSection = () => {
           flexDirection: 'column',
           alignItems: 'center',
           flex: '1',
-          maxHeight: '749px',
+          maxHeight: { xs: '145vw', sm: '749px' },
           background:
             ' linear-gradient(81.29deg, #FFA232 11.63%, #FFD977 80.12%)',
           borderRadius: '32px',
         }}>
-        <Box marginTop='33px' sx={{ maxWidth: { xs: '100vw' } }}>
+        <Box marginTop='33px' sx={{ maxWidth: '100vw' }}>
           <Image src={LetItBee} alt='' />
         </Box>
         <Box
@@ -117,6 +121,7 @@ const UpperSection = () => {
               boxShadow: '0px 8px 16px #E18821',
               borderRadius: '100px',
               transform: 'translateY(-15px)',
+              '&:hover': { backgroundColor: 'rgba(138, 74, 0, 0.85)' },
             }}>
             EXPLORE NOW!
           </Button>
@@ -124,33 +129,39 @@ const UpperSection = () => {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: { xs: 'column-reverse', sm: 'row' },
+            flexDirection: 'row',
             alignItems: 'center',
-            margin: 'auto 0 30px',
-            marginBottom: { xs: '300px', md: '250px', lg: '30px' },
+            margin: {
+              xs: '35vw 0 0',
+              sm: '150px 0 0',
+              md: 'auto 0 250px',
+              lg: 'auto 0 30px',
+            },
             width: '100%',
             paddingX: '37px',
-            justifyContent: 'space-between',
+            justifyContent: { xs: 'center', md: 'space-between' },
             alignSelf: 'center',
           }}>
-          <Stack direction='row'>
-            <IconButton href='#beesUtilities' aria-label='scroll down'>
-              <Image src={ArrowY} />
-            </IconButton>
-            <Typography
-              sx={{
-                alignSelf: 'center',
-                textAlign: 'center',
-                fontSize: '12px',
-                fontWeight: '600',
-                fontFamily: 'Montserrat',
-                letterSpacing: '0.24em',
-                color: '#6C3900',
-                paddingX: '8px',
-              }}>
-              SCROLL DOWN
-            </Typography>
-          </Stack>
+          {matches && (
+            <Stack direction='row'>
+              <IconButton href='#beesUtilities' aria-label='scroll down'>
+                <Image src={ArrowY} />
+              </IconButton>
+              <Typography
+                sx={{
+                  alignSelf: 'center',
+                  textAlign: 'center',
+                  fontSize: '12px',
+                  fontWeight: '600',
+                  fontFamily: 'Montserrat',
+                  letterSpacing: '0.24em',
+                  color: '#6C3900',
+                  paddingX: '8px',
+                }}>
+                SCROLL DOWN
+              </Typography>
+            </Stack>
+          )}
           <Stack
             justifyContent='space-between'
             width='196px'
@@ -174,7 +185,8 @@ const UpperSection = () => {
         id={styles.bigBee}
         alignSelf='center'
         position='absolute'
-        bottom='-10px'>
+        bottom='-10px'
+        sx={{ maxWidth: { xs: '75%', sm: '100%' } }}>
         <Image src={BigBee} alt='' />
       </Box>
     </Container>

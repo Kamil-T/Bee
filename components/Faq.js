@@ -41,9 +41,9 @@ const Faq = () => {
       id={styles.faq}
       maxWidth='false'
       sx={{
-        paddingBottom: '80px',
-        paddingTop: '90px',
-        minHeight: { xs: '1320px' },
+        paddingBottom: { xs: '50px', sm: '80px' },
+        paddingTop: { xs: '60px', sm: '90px' },
+        minHeight: { xs: '1120px', sm: '1320px' },
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -120,7 +120,7 @@ const Faq = () => {
           fontSize: { xs: '38px', sm: '64px' },
           lineHeight: '64px',
           color: '#8A4A00',
-          margin: 'auto 0 25px',
+          margin: { xs: '50px 0 25px', sm: 'auto 0 25px' },
         }}>
         Our community
       </Typography>
@@ -146,10 +146,10 @@ const Faq = () => {
       ) : (
         <IconBoxStyled
           className={styles.iconBg}
-          marginBottom='7px'
+          marginTop='auto'
           marginRight='5px'
           display='flex'
-          gap=''>
+          sx={{ marginBottom: { xs: '36px', sm: '7px' } }}>
           <TwitterIcon />
           <DiscordIcon />
           <InstagramIcon />

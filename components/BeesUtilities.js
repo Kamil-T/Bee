@@ -11,12 +11,18 @@ const BeesUtilities = () => {
       <Container
         maxWidth='false'
         sx={{
-          minHeight: '1158px',
+          minHeight: { lg: '1000px', xl: '1158px' },
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           background: '#FFC55E',
-          paddingTop: '111px',
+          paddingTop: {
+            xs: '45px',
+            sm: '60px',
+            md: '85px',
+            lg: '100px',
+            xl: '111px',
+          },
           zIndex: '5',
         }}>
         <Typography

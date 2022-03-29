@@ -40,8 +40,9 @@ const BeesTraits = () => {
         justifyContent: { xs: 'space-around', md: 'center' },
         flexDirection: { xs: 'column', md: 'row' },
         alignItems: 'center',
-        gap: '25px',
-        minHeight: { xs: '1700px', md: '700px', lg: '997px' },
+        gap: { xs: '50px', md: '0px' },
+        minHeight: { xs: 'false', md: '700px', lg: '997px' },
+        paddingY: { xs: '50px', md: '0px' },
         background: '#8A4A00',
       }}>
       <Box

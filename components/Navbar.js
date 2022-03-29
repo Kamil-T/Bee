@@ -117,6 +117,7 @@ const Navbar = () => {
           letterSpacing: '0.01rem',
           fontWeight: '900',
           marginLeft: { xs: '0px', lg: '24px' },
+          '&:hover': { backgroundColor: 'rgba(138, 74, 0, 0.85)' },
         }}>
         MINT BEE
       </Button>
