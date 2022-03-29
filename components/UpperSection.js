@@ -134,7 +134,7 @@ const UpperSection = () => {
             alignSelf: 'center',
           }}>
           <Stack direction='row'>
-            <IconButton aria-label='scroll down'>
+            <IconButton href='#beesUtilities' aria-label='scroll down'>
               <Image src={ArrowY} />
             </IconButton>
             <Typography
@@ -158,25 +158,18 @@ const UpperSection = () => {
             sx={{
               alignItems: { xs: 'flex-end', sm: 'space-between' },
             }}>
-            <Link href='https://discord.com/'>
-              <IconButton aria-label='discord'>
-                <Image src={Discord} />
-              </IconButton>
-            </Link>
-            <Link href='https://twitter.com/'>
-              <IconButton aria-label='twitter'>
-                <Image src={Twitter} />
-              </IconButton>
-            </Link>
-            <Link href='https://instagram.com/'>
-              <IconButton aria-label='instagram'>
-                <Image src={Instagram} />
-              </IconButton>
-            </Link>
+            <IconButton href='https://discord.com/' aria-label='discord'>
+              <Image src={Discord} />
+            </IconButton>
+            <IconButton href='https://twitter.com/' aria-label='twitter'>
+              <Image src={Twitter} />
+            </IconButton>
+            <IconButton href='https://instagram.com/' aria-label='instagram'>
+              <Image src={Instagram} />
+            </IconButton>
           </Stack>
         </Box>
       </Box>
-
       <Box
         id={styles.bigBee}
         alignSelf='center'

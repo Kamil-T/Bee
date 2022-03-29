@@ -5,6 +5,8 @@ import Accordion from '@mui/material/Accordion/'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import Box from '@mui/material/Box'
+import { styled, useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import ArrowY from '../images/ArrowY.svg'
 import styles from '../styles/Faq.module.css'
 import Image from 'next/image'
@@ -14,7 +16,19 @@ import TwitterIcon from './TwitterIcon'
 import InstagramIcon from './InstagramIcon'
 import { useState } from 'react'
 
+const IconBoxStyled = styled(Box)(() => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  maxWidth: '245px',
+  maxHeight: '230px',
+  width: '100vw',
+  height: '100vh',
+}))
+
 const Faq = () => {
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.up('md'))
   const [expanded, setExpanded] = useState(false)
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -29,7 +43,7 @@ const Faq = () => {
       sx={{
         paddingBottom: '80px',
         paddingTop: '90px',
-        minHeight: { xs: '1900px', md: '1320px' },
+        minHeight: { xs: '1320px' },
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -110,49 +124,37 @@ const Faq = () => {
         }}>
         Our community
       </Typography>
-
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' },
-          gap: { sm: '70px', md: '23px', lg: '112px' },
-          marginBottom: '7px',
-          marginRight: '5px',
-        }}>
+      {matches ? (
         <Box
+          sx={{
+            display: 'flex',
+            flexDirection: { md: 'row' },
+            gap: { md: '23px', lg: '112px' },
+            marginBottom: '7px',
+            marginRight: '5px',
+          }}>
+          <IconBoxStyled className={styles.iconBg}>
+            <TwitterIcon />
+          </IconBoxStyled>
+          <IconBoxStyled className={styles.iconBg}>
+            <DiscordIcon />
+          </IconBoxStyled>
+          <IconBoxStyled className={styles.iconBg}>
+            <InstagramIcon />
+          </IconBoxStyled>
+        </Box>
+      ) : (
+        <IconBoxStyled
+          className={styles.iconBg}
+          marginBottom='7px'
+          marginRight='5px'
           display='flex'
-          alignItems='center'
-          justifyContent='center'
-          maxWidth='245px'
-          maxHeight='230px'
-          width='100vw'
-          height='100vh'
-          className={styles.iconBg}>
+          gap=''>
           <TwitterIcon />
-        </Box>
-        <Box
-          display='flex'
-          alignItems='center'
-          justifyContent='center'
-          maxWidth='245px'
-          maxHeight='230px'
-          width='100vw'
-          height='100vh'
-          className={styles.iconBg}>
           <DiscordIcon />
-        </Box>
-        <Box
-          display='flex'
-          alignItems='center'
-          justifyContent='center'
-          maxWidth='245px'
-          maxHeight='230px'
-          width='100vw'
-          height='100vh'
-          className={styles.iconBg}>
           <InstagramIcon />
-        </Box>
-      </Box>
+        </IconBoxStyled>
+      )}
     </Container>
   )
 }

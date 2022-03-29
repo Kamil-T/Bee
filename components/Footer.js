@@ -9,13 +9,12 @@ const Footer = () => {
       sx={{
         display: 'flex',
         justifyContent: 'center',
-        minHeight: '120px',
+        minHeight: '50px',
         background: '#402200',
         borderTop: '2px solid #00A6F1',
       }}>
       <Typography
         sx={{
-          marginTop: '21px',
           fontFamily: 'Montserrat',
           fontSize: '16px',
           lineHeight: '200%',
