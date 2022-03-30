@@ -12,30 +12,42 @@ const Xyz = () => {
       <Box
         marginY='20px'
         marginRight='24px'
-        paddingX='24px'
         sx={{
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
           width: '119px',
           height: '71.38px',
-          background: '#DB8216',
+          background: 'linear-gradient(to bottom, #DB8116, #F6AD0B)',
           borderRadius: '16px',
           transform: 'rotate(-2.41deg)',
-          border: '2px solid',
+          position: 'relative',
         }}>
-        <Typography
+        <Box
           sx={{
-            fontFamily: 'Clash Grotesk',
-            fontSize: '32px',
-            fontWeight: '700',
-            lineHeight: '32px',
-            letterSpacing: '0em',
-            color: 'white',
-            transform: 'rotate(2.41deg)',
+            display: 'flex',
+            width: '119px',
+            height: '71.38px',
+            background: '#DB8216',
+            borderRadius: '16px',
+            border: '2px solid transparent',
+            backgroundClip: 'padding-box',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}>
-          XYZ
-        </Typography>
+          <Typography
+            sx={{
+              fontFamily: 'Clash Grotesk',
+              fontSize: '32px',
+              fontWeight: '700',
+              lineHeight: '32px',
+              letterSpacing: '0em',
+              color: 'white',
+              transform: 'rotate(2.41deg)',
+            }}>
+            XYZ
+          </Typography>
+        </Box>
       </Box>
       <Typography
         sx={{

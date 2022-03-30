@@ -62,7 +62,7 @@ const UpperSection = () => {
           <Typography
             sx={{
               fontFamily: 'Clash Grotesk',
-              fontSize: { xs: '40px', sm: '56px', md: '64px', lg: '72px' },
+              fontSize: { xs: '35px', sm: '60px', md: '64px', lg: '72px' },
               maxHeight: '97px',
               fontWeight: '700',
               letterSpacing: '0.005rem',
@@ -76,8 +76,8 @@ const UpperSection = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 maxWidth: {
-                  xs: '300px',
-                  sm: '500px',
+                  xs: '85%',
+                  sm: '85%',
                   md: '750px',
                   lg: '911px',
                 },
@@ -94,7 +94,7 @@ const UpperSection = () => {
                   textAlign: 'center',
                   fontSize: {
                     xs: '50px',
-                    sm: '75px',
+                    sm: '85px',
                     md: '100px',
                     lg: '150.5px',
                   },
@@ -120,7 +120,7 @@ const UpperSection = () => {
               background: '#8A4A00',
               boxShadow: '0px 8px 16px #E18821',
               borderRadius: '100px',
-              transform: 'translateY(-15px)',
+              transform: { xs: 'translateY(-5px)', sm: 'translateY(-15px)' },
               '&:hover': { backgroundColor: 'rgba(138, 74, 0, 0.85)' },
             }}>
             EXPLORE NOW!

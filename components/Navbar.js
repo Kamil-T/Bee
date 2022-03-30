@@ -23,6 +23,10 @@ const Navbar = () => {
   const MenuItemStyled = styled(MenuItem)(() => ({
     paddingRight: '0px',
     paddingLeft: '0px',
+    '&:hover': {
+      textDecoration: 'underline',
+      backgroundColor: 'transparent',
+    },
   }))
 
   const Links = () => {
