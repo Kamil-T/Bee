@@ -13,23 +13,27 @@ import styles from '../styles/BeesTraits.module.css'
 import { useEffect, useState } from 'react'
 
 const BeesTraits = () => {
-  const traits = ['Hats', 'Glasses', 'Noses', 'Hands', 'Wings']
-  const [count, setCount] = useState(0)
-  const [trait, setTrait] = useState(traits[count])
+  const traits = {
+    1: 'Glasses',
+    2: 'Hats',
+    3: 'Wings',
+    4: 'Hats',
+    5: 'Guns',
+    6: 'Hats',
+  }
+
+  const [count, setCount] = useState(1)
+  console.log(count)
 
   const handleChange = (direction) => {
     direction === 'plus' ? setCount((count += 1)) : setCount((count -= 1))
-    if (count >= traits.length) {
-      setCount(0)
+    if (count > Object.keys(traits).length) {
+      setCount(1)
     }
-    if (count < 0) {
-      setCount(traits.length - 1)
+    if (count < 1) {
+      setCount(Object.keys(traits).length)
     }
   }
-
-  useEffect(() => {
-    setTrait(traits[count])
-  }, [count])
 
   return (
     <Container
@@ -144,7 +148,7 @@ const BeesTraits = () => {
                 transform: 'matrix(1, 0.03, -0.03, 1, 0, 0)',
                 textTransform: 'none',
               }}>
-              {trait} - lot of them!
+              {traits[count]} - lot of them!
             </Typography>
           </Button>
           <Box
@@ -183,23 +187,89 @@ const BeesTraits = () => {
           gridColumnGap: '5px',
           gridRowGap: '0px',
         }}>
-        <Box className={styles.traitBg} gridArea='1 / 1 / 2 / 5'>
-          <Image src={glasses} width={139} height={119} />
+        <Box
+          sx={{
+            paddingY: { xs: '10px', md: '13px', lg: '15px' },
+          }}
+          id={`${count === 1 ? styles.active : ''}`}
+          gridArea='1 / 1 / 2 / 5'>
+          <Box
+            onClick={() => {
+              setCount(1)
+            }}
+            className={styles.traitBg}>
+            <Image src={glasses} width={139} height={119} />
+          </Box>
         </Box>
-        <Box className={styles.traitBg} gridArea='1 / 5 / 2 / 9'>
-          <Image src={hat} height={119} />
+        <Box
+          sx={{
+            paddingY: { xs: '10px', md: '13px', lg: '15px' },
+          }}
+          id={`${count === 2 ? styles.active : ''}`}
+          gridArea='1 / 5 / 2 / 9'>
+          <Box
+            onClick={() => {
+              setCount(2)
+            }}
+            className={styles.traitBg}>
+            <Image src={hat} height={119} />
+          </Box>
         </Box>
-        <Box className={styles.traitBg} gridArea='1 / 9 / 2 / 13'>
-          <Image src={wings} height={119} />
+        <Box
+          sx={{
+            paddingY: { xs: '10px', md: '13px', lg: '15px' },
+          }}
+          id={`${count === 3 ? styles.active : ''}`}
+          gridArea='1 / 9 / 2 / 13'>
+          <Box
+            onClick={() => {
+              setCount(3)
+            }}
+            className={styles.traitBg}>
+            <Image src={wings} height={119} />
+          </Box>
         </Box>
-        <Box className={styles.traitBg} gridArea='2 / 3 / 3 / 7'>
-          <Image src={hat} height={119} />
+        <Box
+          sx={{
+            paddingY: { xs: '10px', md: '13px', lg: '15px' },
+          }}
+          id={`${count === 4 ? styles.active : ''}`}
+          gridArea='2 / 3 / 3 / 7'>
+          <Box
+            onClick={() => {
+              setCount(4)
+            }}
+            className={styles.traitBg}>
+            <Image src={hat} height={119} />
+          </Box>
         </Box>
-        <Box className={styles.traitBg} gridArea='2 / 7 / 3 / 11'>
-          <Image src={gun} height={119} />
+        <Box
+          sx={{
+            paddingY: { xs: '10px', md: '13px', lg: '15px' },
+          }}
+          id={`${count === 5 ? styles.active : ''}`}
+          gridArea='2 / 7 / 3 / 11'>
+          <Box
+            onClick={() => {
+              setCount(5)
+            }}
+            className={styles.traitBg}>
+            <Image src={gun} height={119} />
+          </Box>
         </Box>
-        <Box className={styles.traitBg} gridArea='3 / 5 / 4 / 9'>
-          <Image src={hat} height={119} />
+        <Box
+          sx={{
+            paddingY: { xs: '10px', md: '13px', lg: '15px' },
+          }}
+          id={`${count === 6 ? styles.active : ''}`}
+          gridArea='3 / 5 / 4 / 9'>
+          <Box
+            onClick={() => {
+              setCount(6)
+            }}
+            className={styles.traitBg}>
+            <Image src={hat} height={119} />
+          </Box>
         </Box>
       </Box>
     </Container>
