@@ -1,10 +1,18 @@
+import { useState } from 'react'
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import Tabs from '@mui/material/Tabs'
+import { useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import Xyz from './Xyz'
 import Bees from './Bees'
+import BeesMobile from './BeesMobile'
 
 const BeesUtilities = () => {
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.up('md'))
+
   return (
     <>
       <div id='beesUtilities' />
@@ -61,7 +69,7 @@ const BeesUtilities = () => {
           <Xyz />
           <Xyz />
         </Box>
-        <Bees />
+        {matches ? <Bees /> : <BeesMobile />}
       </Container>
     </>
   )

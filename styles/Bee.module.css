@@ -4,3 +4,11 @@
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
+
+.beebg {
+  padding: 0;
+  background-image: url('../images/beebg.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

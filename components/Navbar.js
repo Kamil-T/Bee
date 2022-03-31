@@ -81,20 +81,18 @@ const Navbar = () => {
       sx={{ py: { xs: '15px', md: '34px' }, px: { xs: '20px', md: '45px' } }}>
       {matches ? (
         <>
-          <Button
+          <IconButton
             id='basic-button'
             aria-controls={open ? 'basic-menu' : undefined}
             aria-haspopup='true'
             aria-expanded={open ? 'true' : undefined}
-            onClick={handleClick}>
-            <IconButton
-              size='large'
-              edge='center'
-              aria-label='open drawer'
-              sx={{ color: '#DB8216' }}>
-              <MenuIcon />
-            </IconButton>
-          </Button>
+            onClick={handleClick}
+            size='large'
+            edge='start'
+            aria-label='open drawer'
+            sx={{ color: '#DB8216' }}>
+            <MenuIcon />
+          </IconButton>
           <Menu
             id='basic-menu'
             anchorEl={anchorEl}
@@ -102,6 +100,14 @@ const Navbar = () => {
             onClose={handleClose}
             MenuListProps={{
               'aria-labelledby': 'basic-button',
+            }}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'left',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'center',
             }}>
             <Links />
           </Menu>
