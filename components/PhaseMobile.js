@@ -3,6 +3,8 @@ import Accordion from '@mui/material/Accordion/'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import Typography from '@mui/material/Typography'
+import Image from 'next/image'
+import ArrowY from '../images/ArrowY.svg'
 
 const PhaseMobile = ({ text, expanded, setExpanded }) => {
   const handleChange = (panel) => (event, isExpanded) => {
@@ -22,17 +24,24 @@ const PhaseMobile = ({ text, expanded, setExpanded }) => {
           boxShadow: 'none',
         }}>
         <AccordionSummary
+          expandIcon={<Image src={ArrowY} />}
           aria-controls={`phase${text}`}
           id={`phase${text}`}
-          sx={{ paddingX: '0px' }}>
+          sx={{
+            width: '50vw',
+            paddingX: '5px',
+            background: '#E9A00A',
+            height: '76px',
+            borderRadius: '16px',
+          }}>
           <Box
             display='flex'
+            flexDirection='column'
             sx={{
+              width: '40vw',
               alignSelf: 'center',
               justifyContent: 'center',
-              background: '#E9A00A',
-              height: '76px',
-              borderRadius: '16px',
+
               transform: 'matrix(1, -0.03, 0.03, 1, 0, 0)',
             }}>
             <Typography
@@ -41,7 +50,6 @@ const PhaseMobile = ({ text, expanded, setExpanded }) => {
                 fontWeight: '700',
                 fontSize: '28px',
                 whiteSpace: 'nowrap',
-                paddingX: '50px',
                 lineHeight: '32px',
                 color: '#FFFFFF',
                 transform: 'matrix(1, 0.03, 0, 1, 0, 0)',

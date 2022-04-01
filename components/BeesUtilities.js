@@ -40,7 +40,7 @@ const BeesUtilities = () => {
             fontSize: { xs: '20px', sm: '24px' },
             lineHeight: '24px',
             color: 'white',
-            marginTop: '28px',
+            marginTop: { xs: '10px', md: '28px' },
             marginLeft: '6px',
             letterSpacing: '0.001rem',
           }}>
@@ -51,14 +51,14 @@ const BeesUtilities = () => {
             fontFamily: 'Clash Grotesk',
             fontWeight: '700',
             fontSize: { xs: '44px', sm: '58px', md: '64px' },
-            margin: '16px 0 70px 6px',
+            margin: { xs: '16px 0 25px 6px', md: '16px 0 70px 6px' },
             lineHeight: '64px',
             letterSpacing: '0.001rem',
           }}>
           Bees utilities
         </Typography>
         <Box
-          marginBottom='80px'
+          marginBottom='40px'
           display='flex'
           maxWidth='1000px'
           justifyContent='space-between'

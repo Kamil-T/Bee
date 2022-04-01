@@ -129,7 +129,7 @@ const BeesTraits = () => {
             minHeight='45px'>
             <Image src={ArrowIcon} />
           </Box>
-          <Button
+          <Box
             sx={{
               height: '76px',
               marginX: '32px',
@@ -150,7 +150,7 @@ const BeesTraits = () => {
               }}>
               {traits[count]} - lot of them!
             </Typography>
-          </Button>
+          </Box>
           <Box
             onClick={() => {
               handleChange('plus')

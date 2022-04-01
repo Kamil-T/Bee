@@ -1,7 +1,7 @@
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import Menu from '@mui/material/Menu'
-import MenuItem from '@mui/material/MenuItem'
+import MenuList from '@mui/material/MenuList'
 import { styled, useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import IconButton from '@mui/material/IconButton'
@@ -14,49 +14,36 @@ const Navbar = () => {
     all: 'unset',
     fontFamily: 'Montserrat',
     fontWeight: '500',
-    paddingLeft: '24px',
-    paddingRight: '24px',
+    paddingLeft: '22px',
+    paddingRight: '22px',
     fontSize: '16px',
     color: 'black',
-  }))
-
-  const MenuItemStyled = styled(MenuItem)(() => ({
-    paddingRight: '0px',
-    paddingLeft: '0px',
+    cursor: 'pointer',
     '&:hover': {
       textDecoration: 'underline',
       backgroundColor: 'transparent',
     },
+    width: 'fit-Content',
   }))
 
   const Links = () => {
     return (
       <>
-        <MenuItemStyled>
-          <LinkStyled onClick={handleClose} href='/'>
-            About us
-          </LinkStyled>
-        </MenuItemStyled>
-        <MenuItemStyled>
-          <LinkStyled onClick={handleClose} href='/'>
-            Yetis
-          </LinkStyled>
-        </MenuItemStyled>
-        <MenuItemStyled>
-          <LinkStyled onClick={handleClose} href='/'>
-            Story
-          </LinkStyled>
-        </MenuItemStyled>
-        <MenuItemStyled>
-          <LinkStyled onClick={handleClose} href='/'>
-            Wishlist
-          </LinkStyled>
-        </MenuItemStyled>
-        <MenuItemStyled>
-          <LinkStyled onClick={handleClose} href='#roadMap'>
-            Roadmap
-          </LinkStyled>
-        </MenuItemStyled>
+        <LinkStyled onClick={handleClose} href='/'>
+          About us
+        </LinkStyled>
+        <LinkStyled onClick={handleClose} href='/'>
+          Yetis
+        </LinkStyled>
+        <LinkStyled onClick={handleClose} href='/'>
+          Story
+        </LinkStyled>
+        <LinkStyled onClick={handleClose} href='/'>
+          Wishlist
+        </LinkStyled>
+        <LinkStyled onClick={handleClose} href='#roadMap'>
+          Roadmap
+        </LinkStyled>
       </>
     )
   }
@@ -103,13 +90,25 @@ const Navbar = () => {
             }}
             anchorOrigin={{
               vertical: 'bottom',
-              horizontal: 'left',
+              horizontal: 'center',
             }}
             transformOrigin={{
               vertical: 'top',
               horizontal: 'center',
-            }}>
-            <Links />
+            }}
+            anchorReference='anchorPosition'
+            anchorPosition={{ top: 100, left: 200 }}>
+            <MenuList
+              sx={{
+                marginX: 'auto',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '25px',
+                width: '97vw',
+                height: 'calc(97vh - 90px )',
+              }}>
+              <Links />
+            </MenuList>
           </Menu>
         </>
       ) : (
