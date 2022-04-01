@@ -1,16 +1,14 @@
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
 import ArrowIcon from '../images/ArrowX.svg'
 import Image from 'next/image'
-import beesTraitsBee from '../images/beesTraitsBee.png'
 import glasses from '../images/glasses.png'
 import gun from '../images/gun.png'
 import wings from '../images/wings.png'
 import hat from '../images/hat.png'
 import styles from '../styles/BeesTraits.module.css'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const BeesTraits = () => {
   const traits = {
@@ -44,7 +42,7 @@ const BeesTraits = () => {
         justifyContent: { xs: 'space-around', md: 'center' },
         flexDirection: { xs: 'column', md: 'row' },
         alignItems: 'center',
-        gap: { xs: '50px', md: '0px' },
+        gap: { xs: '50px', md: '25px' },
         minHeight: { xs: 'false', md: '700px', lg: '997px' },
         paddingY: { xs: '50px', md: '0px' },
         background: '#8A4A00',
@@ -113,8 +111,39 @@ const BeesTraits = () => {
         flexDirection='column'
         alignItems='center'
         marginTop='-5px'>
-        <Box marginTop='55px' marginLeft='40px' id={styles.beesTraitsBee}>
-          <Image src={beesTraitsBee} />
+        <Box
+          marginTop='55px'
+          marginLeft='0px'
+          maxWidth='599px'
+          maxHeight='594px'
+          width='100%'
+          id={styles.beesTraitsBeebg}>
+          <Box
+            maxWidth='599px'
+            maxHeight='594px'
+            width='100%'
+            display='grid'
+            gridTemplateColumns='repeat(12, 1fr)'
+            gridTemplateRows='repeat(9, 1fr)'
+            gridColumnGap='0px'
+            gridRowGap='0px'
+            id={styles.traitsBeebg}>
+            <Box gridArea='2 / 11 / 6 / 13'>
+              <Image src={gun} width={100} height={250} />
+            </Box>
+            <Box gridArea='1 / 6 / 4 / 11'>
+              {' '}
+              <Image src={hat} width={240} height={190} />
+            </Box>
+            <Box gridArea='4 / 5 / 5 / 11'>
+              <Image src={glasses} width={299.5} height={60} />
+            </Box>
+            <Box gridArea='2 / 2 / 4 / 6'>
+              <Image src={wings} width={200} height={132} />
+            </Box>
+            <Box gridArea='5 / 6 / 7 / 11'></Box>
+            <Box gridArea='7 / 6 / 9 / 11'></Box>
+          </Box>
         </Box>
         <Box
           marginTop='-75px'
@@ -183,10 +212,8 @@ const BeesTraits = () => {
         gridTemplateColumns='repeat(12, 1fr)'
         gridTemplateRows='repeat(3, 1fr)'
         marginTop='-5px'
-        sx={{
-          gridColumnGap: '5px',
-          gridRowGap: '0px',
-        }}>
+        gridColumnGap='5px'
+        gridRowGap='0px'>
         <Box
           sx={{
             paddingY: { xs: '10px', md: '13px', lg: '15px' },

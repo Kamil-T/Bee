@@ -4,11 +4,19 @@
   background-image: url('../images/BeesTraitsBg.svg');
 }
 
-#beesTraitsBee {
+#beesTraitsBeebg {
   background-image: url('../images/beesTraitsbeebg.svg');
   background-repeat: no-repeat;
-  background-size: 82%;
+  background-size: 85%;
   background-position: center;
+}
+
+#traitsBeebg {
+    background-image: url('../images/beesTraitsBee.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:center -5px ;
+    
 }
 
 .traitBg {
