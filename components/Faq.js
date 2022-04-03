@@ -7,9 +7,8 @@ import AccordionDetails from '@mui/material/AccordionDetails'
 import Box from '@mui/material/Box'
 import { styled, useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
-import ArrowY from '../images/ArrowY.svg'
-import Image from 'next/image'
 import styles from '../styles/Faq.module.css'
+import ArrowIcon from './ArrowIcon'
 import frequentlyAskedQuestion from '../faq'
 import DiscordIcon from './DiscordIcon'
 import TwitterIcon from './TwitterIcon'
@@ -78,13 +77,32 @@ const Faq = () => {
               expanded={expanded === `panel${index}`}
               onChange={handleChange(`panel${index}`)}
               disableGutters
-              sx={{ maxWidth: '888px', paddingY: '27px', boxShadow: 'none' }}>
+              sx={{
+                maxWidth: '888px',
+                paddingY: '27px',
+                boxShadow: 'none',
+                borderTop: '1px solid',
+                borderColor: 'rgba(242, 226, 175, 1)',
+                ':before': {
+                  opacity: '0',
+                },
+                ':first-of-type': { borderTop: 'none' },
+              }}>
               <AccordionSummary
-                expandIcon={<Image src={ArrowY} />}
+                expandIcon={
+                  <ArrowIcon
+                    fill={expanded === `panel${index}` ? '#FFF6D8' : 'none'}
+                  />
+                }
                 aria-controls={answer}
                 id={question}
-                sx={{ paddingX: { xs: '12px', sm: '24px' } }}>
+                sx={{
+                  paddingX: { xs: '12px', sm: '24px' },
+                }}>
                 <Typography
+                  className={
+                    expanded === `panel${index}` ? styles.questionActive : ''
+                  }
                   sx={{
                     fontFamily: 'Clash Grotesk',
                     fontWeight: '600',
@@ -149,6 +167,7 @@ const Faq = () => {
           marginTop='auto'
           marginRight='5px'
           display='flex'
+          gap='6px'
           sx={{ marginBottom: { xs: '36px', sm: '7px' } }}>
           <TwitterIcon />
           <DiscordIcon />

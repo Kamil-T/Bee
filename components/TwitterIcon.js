@@ -4,9 +4,9 @@ import IconButton from '@mui/material/IconButton'
 const TwitterIcon = (props) => (
   <IconButton
     sx={{
-      padding: '11px',
-      '&:hover': {
-        backgroundColor: 'rgba(0, 0, 0, 0.07)',
+      ':hover': {
+        backgroundColor: 'rgba(0, 0, 0, 0.00)',
+        opacity: '0.75',
       },
     }}
     href='https://twitter.com'>

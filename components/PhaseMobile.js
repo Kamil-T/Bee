@@ -3,10 +3,9 @@ import Accordion from '@mui/material/Accordion/'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import Typography from '@mui/material/Typography'
-import Image from 'next/image'
-import ArrowY from '../images/ArrowY.svg'
+import ArrowIcon from './ArrowIcon'
 
-const PhaseMobile = ({ text, expanded, setExpanded }) => {
+const PhaseMobile = ({ text, expanded, setExpanded, defExpanded = false }) => {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false)
   }
@@ -14,6 +13,7 @@ const PhaseMobile = ({ text, expanded, setExpanded }) => {
   return (
     <Box>
       <Accordion
+        defaultExpanded={defExpanded}
         key={text}
         expanded={expanded === `panel${text}`}
         onChange={handleChange(`panel${text}`)}
@@ -24,7 +24,12 @@ const PhaseMobile = ({ text, expanded, setExpanded }) => {
           boxShadow: 'none',
         }}>
         <AccordionSummary
-          expandIcon={<Image src={ArrowY} />}
+          expandIcon={
+            <ArrowIcon
+              fill={expanded === `panel${text}` ? '#FFFFFF' : 'none'}
+              border={expanded === `panel${text}` ? '#FFFFFF' : '#6C3900'}
+            />
+          }
           aria-controls={`phase${text}`}
           id={`phase${text}`}
           sx={{
@@ -48,7 +53,7 @@ const PhaseMobile = ({ text, expanded, setExpanded }) => {
               sx={{
                 fontFamily: 'Clash Grotesk',
                 fontWeight: '700',
-                fontSize: '28px',
+                fontSize: '32px',
                 whiteSpace: 'nowrap',
                 lineHeight: '32px',
                 color: '#FFFFFF',
@@ -66,7 +71,7 @@ const PhaseMobile = ({ text, expanded, setExpanded }) => {
                 marginLeft: '5px',
                 fontFamily: 'Montserrat',
                 fontWeight: '700',
-                fontSize: '14px',
+                fontSize: '20px',
                 lineHeight: '32px',
                 letterSpacing: '0.01em',
                 color: 'white',
@@ -79,7 +84,7 @@ const PhaseMobile = ({ text, expanded, setExpanded }) => {
                 marginTop: '15px',
                 fontFamily: 'Montserrat',
                 fontWeight: '500',
-                fontSize: '12px',
+                fontSize: '14px',
                 lineHeight: '24px',
                 letterSpacing: '0.01em',
                 color: 'white',

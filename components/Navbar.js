@@ -104,7 +104,7 @@ const Navbar = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '25px',
-                width: '97vw',
+                width: '100vw',
                 height: 'calc(97vh - 90px )',
               }}>
               <Links />

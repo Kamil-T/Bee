@@ -4,9 +4,9 @@ import IconButton from '@mui/material/IconButton'
 const InstagramIcon = (props) => (
   <IconButton
     sx={{
-      padding: '11px',
-      '&:hover': {
-        backgroundColor: 'rgba(0, 0, 0, 0.07)',
+      ':hover': {
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        opacity: '0.75',
       },
     }}
     href='https://instagram.com'>

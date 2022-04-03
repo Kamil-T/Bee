@@ -1,8 +1,7 @@
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
-import ArrowIcon from '../images/ArrowX.svg'
+import ArrowIcon from './ArrowIcon'
 import Image from 'next/image'
 import beesTraitsBee from '../images/beesTraitsBee.png'
 import glasses from '../images/glasses.png'
@@ -126,8 +125,9 @@ const BeesTraits = () => {
               handleChange('minus')
             }}
             minWidth='45px'
-            minHeight='45px'>
-            <Image src={ArrowIcon} />
+            minHeight='45px'
+            sx={{ transform: 'rotate(90deg)' }}>
+            <ArrowIcon arrow='#FFFFFF' border='#DB8116' />
           </Box>
           <Box
             sx={{
@@ -157,8 +157,8 @@ const BeesTraits = () => {
             }}
             minWidth='45px'
             minHeight='45px'
-            sx={{ marginBottom: '10px', transform: 'rotate(180deg)' }}>
-            <Image src={ArrowIcon} />
+            sx={{ transform: 'rotate(270deg)' }}>
+            <ArrowIcon arrow='#FFFFFF' border='#DB8116' />
           </Box>
         </Box>
         <Typography

@@ -10,7 +10,7 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import Image from 'next/image'
 import LetItBee from '../images/letitbee.svg'
 import BigBee from '../images/bigbee.png'
-import ArrowY from '../images/ArrowY.svg'
+import ArrowIcon from './ArrowIcon'
 import Discord from '../images/DiscordIcon.svg'
 import Twitter from '../images/TwitterIcon.svg'
 import Instagram from '../images/InstagramIcon.svg'
@@ -145,7 +145,7 @@ const UpperSection = () => {
           {matches && (
             <Stack direction='row'>
               <IconButton href='#beesUtilities' aria-label='scroll down'>
-                <Image src={ArrowY} />
+                <ArrowIcon />
               </IconButton>
               <Typography
                 sx={{
