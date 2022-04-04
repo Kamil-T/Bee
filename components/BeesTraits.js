@@ -3,26 +3,31 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import ArrowIcon from './ArrowIcon'
 import Image from 'next/image'
-import beesTraitsBee from '../images/beesTraitsBee.png'
-import glasses from '../images/glasses.png'
+import Beebackground from '../images/beesTraitsbeebg.svg'
+import glass from '../images/glassestrait.png'
 import gun from '../images/gun.png'
-import wings from '../images/wings.png'
+import wing from '../images/wingstrait.png'
 import hat from '../images/hat.png'
+import Hats from '../images/Hats.png'
+import Guns from '../images/Guns.png'
+import Masks from '../images/Masks.png'
+import Wings from '../images/Wings.png'
+import Bowtie from '../images/Bowtie.png'
+import Glasses from '../images/Glasses.png'
 import styles from '../styles/BeesTraits.module.css'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const BeesTraits = () => {
   const traits = {
-    1: 'Glasses',
-    2: 'Hats',
-    3: 'Wings',
-    4: 'Hats',
-    5: 'Guns',
-    6: 'Hats',
+    1: { image: Glasses, name: 'Glasses' },
+    2: { image: Hats, name: 'Hats' },
+    3: { image: Wings, name: 'Wings' },
+    4: { image: Hats, name: 'Hats' },
+    5: { image: Guns, name: 'Guns' },
+    6: { image: Hats, name: 'Hats' },
   }
 
   const [count, setCount] = useState(1)
-  console.log(count)
 
   const handleChange = (direction) => {
     direction === 'plus' ? setCount((count += 1)) : setCount((count -= 1))
@@ -112,8 +117,25 @@ const BeesTraits = () => {
         flexDirection='column'
         alignItems='center'
         marginTop='-5px'>
-        <Box marginTop='55px' marginLeft='40px' id={styles.beesTraitsBee}>
-          <Image src={beesTraitsBee} />
+        <Box
+          marginTop='55px'
+          sx={{
+            backgroundImage: `url(${Beebackground.src})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '87%',
+            backgroundPosition: 'center',
+          }}>
+          <Box
+            marginTop='-70px'
+            sx={{
+              clipPath: 'polygon(0 0, 100% 0, 100% 71%, 50% 99%, 0 71%)',
+            }}>
+            <Image
+              src={`${traits[count].image.src}`}
+              height={569}
+              width={493}
+            />
+          </Box>
         </Box>
         <Box
           marginTop='-75px'
@@ -148,7 +170,7 @@ const BeesTraits = () => {
                 transform: 'matrix(1, 0.03, -0.03, 1, 0, 0)',
                 textTransform: 'none',
               }}>
-              {traits[count]} - lot of them!
+              {traits[count].name}- lot of them!
             </Typography>
           </Box>
           <Box
@@ -198,7 +220,7 @@ const BeesTraits = () => {
               setCount(1)
             }}
             className={styles.traitBg}>
-            <Image src={glasses} width={139} height={119} />
+            <Image src={glass} width={139} height={119} />
           </Box>
         </Box>
         <Box
@@ -226,7 +248,7 @@ const BeesTraits = () => {
               setCount(3)
             }}
             className={styles.traitBg}>
-            <Image src={wings} height={119} />
+            <Image src={wing} height={119} />
           </Box>
         </Box>
         <Box
