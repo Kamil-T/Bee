@@ -126,8 +126,8 @@ const BeesTraits = () => {
             backgroundPosition: 'center',
           }}>
           <Box
-            marginTop='-70px'
             sx={{
+              marginTop: { xs: '-55px', sm: '-70px', md: '-55px', lg: '-70px' },
               clipPath: 'polygon(0 0, 100% 0, 100% 71%, 50% 99%, 0 71%)',
             }}>
             <Image
@@ -138,10 +138,12 @@ const BeesTraits = () => {
           </Box>
         </Box>
         <Box
+          width='100%'
           marginTop='-75px'
           display='flex'
+          justifyContent='space-between'
           alignItems='center'
-          sx={{ marginLeft: { xs: '0', lg: '30px' } }}>
+          gap='10px'>
           <Box
             onClick={() => {
               handleChange('minus')
@@ -153,9 +155,12 @@ const BeesTraits = () => {
           </Box>
           <Box
             sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
               height: '76px',
-              marginX: '32px',
-              padding: '25.5px 32px 28px 30.5px',
+              marginX: { xs: '0px', sm: '32px', md: '15px', lg: '32px' },
+              paddingX: { xs: '15px', sm: '20px', md: '20px', lg: '30px' },
               borderRadius: '16px',
               backgroundColor: '#DB8216',
               transform: 'matrix(1, -0.03, 0.03, 1, 0, 0)',
@@ -164,13 +169,18 @@ const BeesTraits = () => {
               sx={{
                 fontFamily: 'Clash Grotesk',
                 fontWeight: '700',
-                fontSize: { xs: '13px', sm: '32px', md: '20px', lg: '32px' },
+                fontSize: {
+                  xs: '4vw',
+                  sm: '29px',
+                  md: '18px',
+                  lg: '24px',
+                  xl: '32px',
+                },
                 lineHeight: '32px',
                 color: 'white',
                 transform: 'matrix(1, 0.03, -0.03, 1, 0, 0)',
-                textTransform: 'none',
               }}>
-              {traits[count].name}- lot of them!
+              {traits[count].name} - lot of them!
             </Typography>
           </Box>
           <Box

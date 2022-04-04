@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import Link from '../src/Link'
 import { useState } from 'react'
+import UpperSectionBg from '../images/UpperSectionBg.svg'
 
 const Navbar = () => {
   const LinkStyled = styled(Link)(() => ({
@@ -44,9 +45,26 @@ const Navbar = () => {
         <LinkStyled onClick={handleClose} href='#roadMap'>
           Roadmap
         </LinkStyled>
+        <Button
+          sx={{
+            width: { xs: '100%', md: '158px' },
+            height: '56px',
+            background: '#8A4A00',
+            borderRadius: '100px',
+            color: '#FFDE73',
+            fontSize: { xs: '12px', md: '16px' },
+            fontFamily: 'Satoshi',
+            letterSpacing: '0.01rem',
+            fontWeight: '900',
+            marginLeft: { xs: '0px', lg: '24px' },
+            '&:hover': { backgroundColor: 'rgba(138, 74, 0, 0.85)' },
+          }}>
+          MINT BEE
+        </Button>
       </>
     )
   }
+
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down('md'))
 
@@ -64,8 +82,10 @@ const Navbar = () => {
       flexDirection='row'
       justifyContent='flex-end'
       alignItems='center'
-      marginRight='8vw'
-      sx={{ py: { xs: '15px', md: '34px' }, px: { xs: '20px', md: '45px' } }}>
+      sx={{
+        py: { xs: '15px', md: '34px' },
+        paddingRight: { xs: '8vw', md: '8vw' },
+      }}>
       {matches ? (
         <>
           <IconButton
@@ -88,6 +108,17 @@ const Navbar = () => {
             MenuListProps={{
               'aria-labelledby': 'basic-button',
             }}
+            marginThreshold={0}
+            PaperProps={{
+              sx: {
+                boxShadow: 'none',
+                maxWidth: '100vw',
+                maxHeight: 'calc(100vh - 55px)',
+                height: '100%',
+                backgroundImage: `url(${UpperSectionBg.src})`,
+                backgroundPosition: 'center -60px',
+              },
+            }}
             anchorOrigin={{
               vertical: 'bottom',
               horizontal: 'center',
@@ -100,7 +131,7 @@ const Navbar = () => {
             anchorPosition={{ top: 100, left: 200 }}>
             <MenuList
               sx={{
-                marginX: 'auto',
+                padding: '32px 48px',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '25px',
@@ -114,22 +145,6 @@ const Navbar = () => {
       ) : (
         <Links />
       )}
-      <Button
-        sx={{
-          width: '158px',
-          height: '56px',
-          background: '#8A4A00',
-          borderRadius: '100px',
-          color: '#FFDE73',
-          fontSize: { xs: '12px', md: '16px' },
-          fontFamily: 'Satoshi',
-          letterSpacing: '0.01rem',
-          fontWeight: '900',
-          marginLeft: { xs: '0px', lg: '24px' },
-          '&:hover': { backgroundColor: 'rgba(138, 74, 0, 0.85)' },
-        }}>
-        MINT BEE
-      </Button>
     </Stack>
   )
 }
