@@ -42,11 +42,10 @@ const PhaseMobile = ({ text, expanded, setExpanded, defExpanded = false }) => {
           <Box
             display='flex'
             flexDirection='column'
+            alignSelf='center'
+            justifyContent='center'
+            width='40vw'
             sx={{
-              width: '40vw',
-              alignSelf: 'center',
-              justifyContent: 'center',
-
               transform: 'matrix(1, -0.03, 0.03, 1, 0, 0)',
             }}>
             <Typography

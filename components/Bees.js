@@ -1,6 +1,7 @@
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 import Image from 'next/image'
+import BeesBg from '../images/Beesbg.svg'
 import beeGlasses from '../images/beeglasses.png'
 import beeMask from '../images/beemask.png'
 import styles from '../styles/Bee.module.css'
@@ -20,26 +21,26 @@ const Bees = () => {
         justifyItems: 'center',
         alignItems: 'center',
       }}>
-      <Box marginTop='9%' paddingX='4%' sx={{ gridArea: '1 / 1 / 2 / 3' }}>
+      <Box marginTop='9%' paddingX='4%' gridArea='1 / 1 / 2 / 3'>
         <Image src={beeGlasses} />
       </Box>
-      <Box marginTop='9%' paddingX='4%' sx={{ gridArea: '1 / 3 / 2 / 5' }}>
+      <Box marginTop='9%' paddingX='4%' gridArea='1 / 3 / 2 / 5'>
         <Image src={beeGlasses} />
       </Box>
-      <Box marginTop='9%' paddingX='4%' sx={{ gridArea: '1 / 5 / 2 / 7' }}>
+      <Box marginTop='9%' paddingX='4%' gridArea='1 / 5 / 2 / 7'>
         <Image src={beeMask} />
       </Box>
-      <Box marginTop='9%' paddingX='4%' sx={{ gridArea: '1 / 7 / 2 / 9' }}>
+      <Box marginTop='9%' paddingX='4%' gridArea='1 / 7 / 2 / 9'>
         <Image src={beeGlasses} />
       </Box>
-      <Box marginTop='9%' paddingX='4%' sx={{ gridArea: '1 / 9 / 2 / 11' }}>
+      <Box marginTop='9%' paddingX='4%' gridArea='1 / 9 / 2 / 11'>
         <Image src={beeGlasses} />
       </Box>
       <Box
         marginLeft='-1%'
         paddingX='4%'
+        gridArea='2 / 2 / 3 / 4'
         sx={{
-          gridArea: '2 / 2 / 3 / 4',
           marginTop: { xs: '-54%', sm: '-47%', md: '-43%', lg: '-41%' },
         }}>
         <Image src={beeGlasses} />
@@ -47,8 +48,8 @@ const Bees = () => {
       <Box
         marginLeft='-1%'
         paddingX='4%'
+        gridArea='2 / 4 / 3 / 6'
         sx={{
-          gridArea: '2 / 4 / 3 / 6',
           marginTop: { xs: '-54%', sm: '-47%', md: '-43%', lg: '-41%' },
         }}>
         <Image src={beeGlasses} />
@@ -56,8 +57,8 @@ const Bees = () => {
       <Box
         marginLeft='-1%'
         paddingX='4%'
+        gridArea='2 / 6 / 3 / 8'
         sx={{
-          gridArea: '2 / 6 / 3 / 8',
           marginTop: { xs: '-54%', sm: '-47%', md: '-43%', lg: '-41%' },
         }}>
         <Image src={beeMask} />
@@ -65,8 +66,8 @@ const Bees = () => {
       <Box
         marginLeft='-1%'
         paddingX='4%'
+        gridArea='2 / 8 / 3 / 10'
         sx={{
-          gridArea: '2 / 8 / 3 / 10',
           marginTop: { xs: '-54%', sm: '-47%', md: '-43%', lg: '-41%' },
         }}>
         <Image src={beeMask} />

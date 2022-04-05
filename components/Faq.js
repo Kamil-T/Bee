@@ -13,6 +13,8 @@ import frequentlyAskedQuestion from '../faq'
 import DiscordIcon from './DiscordIcon'
 import TwitterIcon from './TwitterIcon'
 import InstagramIcon from './InstagramIcon'
+import FaqBg from '../images/faqBg.svg'
+import IconBg from '../images/Iconbg.svg'
 import { useState } from 'react'
 
 const IconBoxStyled = styled(Box)(() => ({
@@ -37,7 +39,6 @@ const Faq = () => {
   const faq = frequentlyAskedQuestion
   return (
     <Container
-      id={styles.faq}
       maxWidth='false'
       sx={{
         paddingBottom: { xs: '50px', sm: '80px' },
@@ -47,6 +48,8 @@ const Faq = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'flex-start',
+        backgroundImage: `url(${FaqBg.src})`,
+        backgroundPosition: 'bottom',
       }}>
       <Typography
         sx={{
@@ -144,12 +147,12 @@ const Faq = () => {
       </Typography>
       {matches ? (
         <Box
+          display='flex'
+          flexDirection='row'
+          marginBottom='7px'
+          marginRight='5px'
           sx={{
-            display: 'flex',
-            flexDirection: { md: 'row' },
             gap: { md: '23px', lg: '112px' },
-            marginBottom: '7px',
-            marginRight: '5px',
           }}>
           <IconBoxStyled className={styles.iconBg}>
             <TwitterIcon />

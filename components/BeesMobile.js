@@ -1,4 +1,3 @@
-import { darkScrollbar } from '@mui/material'
 import Box from '@mui/material/Box'
 import Image from 'next/image'
 import beeGlasses from '../images/beeglasses.png'
@@ -8,7 +7,6 @@ import styles from '../styles/Bee.module.css'
 const BeesMobile = () => {
   return (
     <Box
-      id={styles.beesMobile}
       display='grid'
       gridTemplateColumns='repeat(9, 1fr)'
       gridTemplateRows='1fr'

@@ -1,13 +1,9 @@
-#faq {
-  background-image: url('../images/faqBg.svg');
-  background-position: bottom;
-}
 
 .iconBg {
   background-image: url('../images/Iconbg.svg');
   background-size: 100%;
   background-position: center;
-}
+} 
 
 .questionActive {
   color: #DB8116

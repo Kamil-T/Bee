@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import Image from 'next/image'
+import UpperSectionBg from '../images/UpperSectionBg.svg'
 import LetItBee from '../images/letitbee.svg'
 import BigBee from '../images/bigbee.png'
 import ArrowIcon from './ArrowIcon'
@@ -22,43 +23,42 @@ const UpperSection = () => {
 
   return (
     <Container
-      id={styles.upperSection}
       maxWidth='false'
       sx={{
         minHeight: { xs: '185vw', sm: '1000px', md: '1037px' },
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
+        backgroundImage: `url(${UpperSectionBg.src})`,
+        backgroundPosition: 'center top',
       }}>
       <Navbar />
       <Box
+        display='flex'
+        flexDirection='column'
+        alignItems='center'
+        flex='1'
         alignSelf='center'
+        borderRadius='32px'
         sx={{
           maxWidth: { xs: '100vw', sm: '1530px' },
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          flex: '1',
           maxHeight: { xs: '145vw', sm: '749px' },
           background:
             ' linear-gradient(81.29deg, #FFA232 11.63%, #FFD977 80.12%)',
-          borderRadius: '32px',
         }}>
-        <Box marginTop='33px' sx={{ maxWidth: '100vw' }}>
+        <Box marginTop='33px' maxWidth='100vw'>
           <Image src={LetItBee} alt='' />
         </Box>
         <Box
           id={styles.honey}
           maxWidth='100%'
           alignItems='center'
-          sx={{
-            height: '552px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignSelf: 'center',
-            position: 'absolute',
-            marginTop: '52px',
-          }}>
+          height='552px'
+          display='flex'
+          flexDirection='column'
+          alignSelf='center'
+          position='absolute'
+          marginTop='52px'>
           <Typography
             sx={{
               fontFamily: 'Clash Grotesk',
@@ -72,20 +72,20 @@ const UpperSection = () => {
           </Typography>
           <Box maxWidth='100%' display='flex' justifyContent='center'>
             <Box
+              display='flex'
+              justifyContent='center'
+              width='100vw'
+              borderRadius='32px'
               sx={{
-                display: 'flex',
-                justifyContent: 'center',
                 maxWidth: {
                   xs: '85%',
                   sm: '85%',
                   md: '750px',
                   lg: '911px',
                 },
-                width: '100vw',
                 background: '#DB8216',
                 border:
                   '4px solid linear-gradient(180deg, #DB8116 0%, #F6AD0B 100%)',
-                borderRadius: '32px',
                 transform: 'rotate(-2.41deg)',
               }}>
               <Typography
@@ -127,20 +127,20 @@ const UpperSection = () => {
           </Button>
         </Box>
         <Box
+          display='flex'
+          flexDirection='row'
+          alignItems='center'
+          alignSelf='center'
+          width='100%'
+          paddingX='37px'
           sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
             margin: {
               xs: '35vw 0 0',
               sm: '150px 0 0',
               md: 'auto 0 250px',
               lg: 'auto 0 30px',
             },
-            width: '100%',
-            paddingX: '37px',
             justifyContent: { xs: 'center', md: 'space-between' },
-            alignSelf: 'center',
           }}>
           {matches && (
             <Stack direction='row'>

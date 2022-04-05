@@ -6,12 +6,12 @@ const Phase = ({ text }) => {
     <Box display='flex' flexDirection='column' marginTop='60px'>
       <Box
         display='flex'
+        alignSelf='center'
+        justifyContent='center'
+        height='76px'
+        borderRadius='16px'
         sx={{
-          alignSelf: 'center',
-          justifyContent: 'center',
           background: '#E9A00A',
-          height: '76px',
-          borderRadius: '16px',
           transform: 'matrix(1, -0.03, 0.03, 1, 0, 0)',
         }}>
         <Typography

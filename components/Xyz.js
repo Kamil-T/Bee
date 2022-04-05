@@ -10,30 +10,30 @@ const Xyz = () => {
       alignItems='center'
       sx={{ flexDirection: { xs: 'column', md: 'row' } }}>
       <Box
+        display='flex'
+        justifyContent='center'
+        alignItems='center'
+        width='119px'
+        height='71.38px'
         marginY='20px'
         marginRight='24px'
+        borderRadius='16px'
+        position='relative'
         sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: '119px',
-          height: '71.38px',
           background: 'linear-gradient(to bottom, #DB8116, #F6AD0B)',
-          borderRadius: '16px',
           transform: 'rotate(-2.41deg)',
-          position: 'relative',
         }}>
         <Box
+          display='flex'
+          justifyContent='center'
+          alignItems='center'
+          width='119px'
+          height='71.38px'
+          borderRadius='16px'
+          border='2px solid transparent'
           sx={{
-            display: 'flex',
-            width: '119px',
-            height: '71.38px',
             background: '#DB8216',
-            borderRadius: '16px',
-            border: '2px solid transparent',
             backgroundClip: 'padding-box',
-            justifyContent: 'center',
-            alignItems: 'center',
           }}>
           <Typography
             sx={{

@@ -3,6 +3,7 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import ArrowIcon from './ArrowIcon'
 import Image from 'next/image'
+import BeesTraitsBg from '../images/BeesTraitsBg.svg'
 import Beebackground from '../images/beesTraitsbeebg.svg'
 import glass from '../images/glassestrait.png'
 import gun from '../images/gun.png'
@@ -42,7 +43,6 @@ const BeesTraits = () => {
   return (
     <Container
       maxWidth='false'
-      id={styles.beesTraits}
       sx={{
         display: 'flex',
         justifyContent: { xs: 'space-around', md: 'center' },
@@ -52,6 +52,9 @@ const BeesTraits = () => {
         minHeight: { xs: 'false', md: '700px', lg: '997px' },
         paddingY: { xs: '50px', md: '0px' },
         background: '#8A4A00',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundImage: `url(${BeesTraitsBg.src})`,
       }}>
       <Box
         display='flex'
@@ -154,14 +157,14 @@ const BeesTraits = () => {
             <ArrowIcon arrow='#FFFFFF' border='#DB8116' />
           </Box>
           <Box
+            display='flex'
+            alignItems='center'
+            justifyContent='center'
+            height='76px'
+            borderRadius='16px'
             sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              height: '76px',
               marginX: { xs: '0px', sm: '32px', md: '15px', lg: '32px' },
               paddingX: { xs: '15px', sm: '20px', md: '20px', lg: '30px' },
-              borderRadius: '16px',
               backgroundColor: '#DB8216',
               transform: 'matrix(1, -0.03, 0.03, 1, 0, 0)',
             }}>
@@ -215,10 +218,8 @@ const BeesTraits = () => {
         gridTemplateColumns='repeat(12, 1fr)'
         gridTemplateRows='repeat(3, 1fr)'
         marginTop='-5px'
-        sx={{
-          gridColumnGap: '5px',
-          gridRowGap: '0px',
-        }}>
+        gridColumnGap='5px'
+        gridRowGap='0px'>
         <Box
           sx={{
             paddingY: { xs: '10px', md: '13px', lg: '15px' },
