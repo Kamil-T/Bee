@@ -3,6 +3,7 @@ import IconButton from '@mui/material/IconButton'
 
 const TwitterIcon = (props) => (
   <IconButton
+    disableTouchRipple
     sx={{
       ':hover': {
         backgroundColor: 'rgba(0, 0, 0, 0.00)',

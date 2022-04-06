@@ -8,3 +8,7 @@
 .questionActive {
   color: #DB8116
 }
+
+ .icon :global .MuiAccordionSummary-expandIconWrapper :hover {
+opacity: 0.7
+}

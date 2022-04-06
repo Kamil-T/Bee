@@ -1,5 +1,6 @@
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
+import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import ArrowIcon from './ArrowIcon'
 import Image from 'next/image'
@@ -9,23 +10,23 @@ import glass from '../images/glassestrait.png'
 import gun from '../images/gun.png'
 import wing from '../images/wingstrait.png'
 import hat from '../images/hat.png'
-import Hats from '../images/Hats.png'
-import Guns from '../images/Guns.png'
-import Masks from '../images/Masks.png'
-import Wings from '../images/Wings.png'
-import Bowtie from '../images/Bowtie.png'
-import Glasses from '../images/Glasses.png'
+import HatsBee from '../images/HatsBee.png'
+import GunsBee from '../images/GunsBee.png'
+import MasksBee from '../images/MasksBee.png'
+import WingsBee from '../images/WingsBee.png'
+import BowtieBee from '../images/BowtieBee.png'
+import GlassesBee from '../images/GlassesBee.png'
 import styles from '../styles/BeesTraits.module.css'
 import { useState } from 'react'
 
 const BeesTraits = () => {
   const traits = {
-    1: { image: Glasses, name: 'Glasses' },
-    2: { image: Hats, name: 'Hats' },
-    3: { image: Wings, name: 'Wings' },
-    4: { image: Hats, name: 'Hats' },
-    5: { image: Guns, name: 'Guns' },
-    6: { image: Hats, name: 'Hats' },
+    1: { image: GlassesBee, name: 'Glasses' },
+    2: { image: HatsBee, name: 'Hats' },
+    3: { image: WingsBee, name: 'Wings' },
+    4: { image: HatsBee, name: 'Masks' },
+    5: { image: GunsBee, name: 'Guns' },
+    6: { image: HatsBee, name: 'Hats' },
   }
 
   const [count, setCount] = useState(1)
@@ -147,15 +148,22 @@ const BeesTraits = () => {
           justifyContent='space-between'
           alignItems='center'
           gap='10px'>
-          <Box
+          <IconButton
+            disableTouchRipple
             onClick={() => {
               handleChange('minus')
             }}
             minWidth='45px'
             minHeight='45px'
-            sx={{ transform: 'rotate(90deg)' }}>
+            sx={{
+              transform: 'rotate(90deg)',
+              ':hover': {
+                opacity: '0.75',
+                backgroundColor: 'rgba(0, 0, 0, 0.00)',
+              },
+            }}>
             <ArrowIcon arrow='#FFFFFF' border='#DB8116' />
-          </Box>
+          </IconButton>
           <Box
             display='flex'
             alignItems='center'
@@ -186,15 +194,22 @@ const BeesTraits = () => {
               {traits[count].name} - lot of them!
             </Typography>
           </Box>
-          <Box
+          <IconButton
+            disableTouchRipple
             onClick={() => {
               handleChange('plus')
             }}
             minWidth='45px'
             minHeight='45px'
-            sx={{ transform: 'rotate(270deg)' }}>
+            sx={{
+              transform: 'rotate(270deg)',
+              ':hover': {
+                opacity: '0.75',
+                backgroundColor: 'rgba(0, 0, 0, 0.00)',
+              },
+            }}>
             <ArrowIcon arrow='#FFFFFF' border='#DB8116' />
-          </Box>
+          </IconButton>
         </Box>
         <Typography
           sx={{

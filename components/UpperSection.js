@@ -121,7 +121,7 @@ const UpperSection = () => {
               boxShadow: '0px 8px 16px #E18821',
               borderRadius: '100px',
               transform: { xs: 'translateY(-5px)', sm: 'translateY(-15px)' },
-              '&:hover': { backgroundColor: 'rgba(138, 74, 0, 0.85)' },
+              '&:hover': { backgroundColor: 'rgba(158, 74, 0, 1)' },
             }}>
             EXPLORE NOW!
           </Button>
@@ -144,7 +144,16 @@ const UpperSection = () => {
           }}>
           {matches && (
             <Stack direction='row'>
-              <IconButton href='#beesUtilities' aria-label='scroll down'>
+              <IconButton
+                disableTouchRipple
+                href='#beesUtilities'
+                aria-label='scroll down'
+                sx={{
+                  ':hover': {
+                    backgroundColor: 'rgba(0, 0, 0, 0.00)',
+                    opacity: '0.75',
+                  },
+                }}>
                 <ArrowIcon />
               </IconButton>
               <Typography
@@ -169,13 +178,40 @@ const UpperSection = () => {
             sx={{
               alignItems: { xs: 'flex-end', sm: 'space-between' },
             }}>
-            <IconButton href='https://discord.com/' aria-label='discord'>
+            <IconButton
+              disableTouchRipple
+              href='https://discord.com/'
+              aria-label='discord'
+              sx={{
+                ':hover': {
+                  backgroundColor: 'rgba(0, 0, 0, 0.00)',
+                  opacity: '0.75',
+                },
+              }}>
               <Image src={Discord} />
             </IconButton>
-            <IconButton href='https://twitter.com/' aria-label='twitter'>
+            <IconButton
+              disableTouchRipple
+              href='https://twitter.com/'
+              aria-label='twitter'
+              sx={{
+                ':hover': {
+                  backgroundColor: 'rgba(0, 0, 0, 0.00)',
+                  opacity: '0.75',
+                },
+              }}>
               <Image src={Twitter} />
             </IconButton>
-            <IconButton href='https://instagram.com/' aria-label='instagram'>
+            <IconButton
+              disableTouchRipple
+              href='https://instagram.com/'
+              aria-label='instagram'
+              sx={{
+                ':hover': {
+                  backgroundColor: 'rgba(0, 0, 0, 0.00)',
+                  opacity: '0.75',
+                },
+              }}>
               <Image src={Instagram} />
             </IconButton>
           </Stack>

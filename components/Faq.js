@@ -92,6 +92,7 @@ const Faq = () => {
                 ':first-of-type': { borderTop: 'none' },
               }}>
               <AccordionSummary
+                className={styles.icon}
                 expandIcon={
                   <ArrowIcon
                     fill={expanded === `panel${index}` ? '#FFF6D8' : 'none'}
