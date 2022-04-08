@@ -8,7 +8,9 @@ import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import Link from '../src/Link'
 import { useState } from 'react'
+import BumbleParty from '../images/BumbleParty.png'
 import UpperSectionBg from '../images/UpperSectionBg.svg'
+import Image from 'next/image'
 
 const Navbar = () => {
   const LinkStyled = styled(Link)(() => ({
@@ -82,10 +84,17 @@ const Navbar = () => {
       flexDirection='row'
       justifyContent='flex-end'
       alignItems='center'
+      alignSelf='center'
+      width='100%'
+      height='90px'
+      marginBottom='34px'
       sx={{
-        py: { xs: '15px', md: '34px' },
-        paddingRight: { xs: '8vw', md: '8vw' },
+        pt: { xs: '15px', md: '34px' },
+        maxWidth: { xs: '100vw', sm: '1460px' },
       }}>
+      <IconButton sx={{ marginTop: '65px', marginRight: 'auto' }}>
+        <Image src={BumbleParty} width={220} height={155} />
+      </IconButton>
       {matches ? (
         <>
           <IconButton

@@ -11,6 +11,8 @@ import Image from 'next/image'
 import UpperSectionBg from '../images/UpperSectionBg.svg'
 import LetItBee from '../images/letitbee.svg'
 import BigBee from '../images/bigbee.png'
+import MintBeeBg from '../images/mintBeeBg.svg'
+import beeGlasses from '../images/beeglasses.png'
 import ArrowIcon from './ArrowIcon'
 import Discord from '../images/DiscordIcon.svg'
 import Twitter from '../images/TwitterIcon.svg'
@@ -128,93 +130,165 @@ const UpperSection = () => {
         </Box>
         <Box
           display='flex'
-          flexDirection='row'
-          alignItems='center'
-          alignSelf='center'
-          width='100%'
-          paddingX='37px'
+          justifyContent='space-between'
+          width='96%'
           sx={{
             margin: {
               xs: '35vw 0 0',
               sm: '150px 0 0',
               md: 'auto 0 250px',
-              lg: 'auto 0 30px',
+              lg: 'auto 0 150px',
+              xl: 'auto 0 30px',
             },
-            justifyContent: { xs: 'center', md: 'space-between' },
           }}>
-          {matches && (
-            <Stack direction='row'>
+          <Box display='flex' gap='16px'>
+            <Box
+              display='flex'
+              width='189px'
+              height='217px'
+              justifyContent='center'
+              alignItems='center'
+              sx={{ backgroundImage: `url(${MintBeeBg.src})` }}>
+              <Image src={beeGlasses} width={156} height={164} />
+            </Box>
+            <Box
+              display='flex'
+              flexDirection='column'
+              justifyContent='center'
+              maxWidth='194px'>
+              <Box>
+                <Typography
+                  component='span'
+                  sx={{
+                    fontFamily: 'Clash Grotesk',
+                    fontSize: '32px',
+                    fontWeight: '700',
+                    lineHeight: '32px',
+                    letterSpacing: '0em',
+                    color: 'white',
+                  }}>
+                  Mint
+                </Typography>{' '}
+                <Typography
+                  component='span'
+                  sx={{
+                    fontFamily: 'Clash Grotesk',
+                    fontSize: '32px',
+                    fontWeight: '700',
+                    lineHeight: '32px',
+                    letterSpacing: '0em',
+                    color: 'black',
+                  }}>
+                  Bee
+                </Typography>
+              </Box>
+              <Typography
+                sx={{
+                  fontFamily: 'Montserrat',
+                  fontSize: '14px',
+                  lineHeight: '24px',
+                  letterSpacing: '0.01em',
+                  marginY: '8px',
+                }}>
+                Duis egestas rutrum erat vel finibus ipsum lorem.
+              </Typography>
+              <Button
+                sx={{
+                  alignSelf: 'center',
+                  padding: '1em 2em',
+                  fontSize: { sx: '12px', sm: '14px', md: '16px' },
+                  fontFamily: 'Satoshi',
+                  letterSpacing: '0.01em',
+                  color: '#FFDE73',
+                  background: '#8A4A00',
+                  boxShadow: '0px 8px 16px #E18821',
+                  borderRadius: '100px',
+                  '&:hover': { backgroundColor: 'rgba(158, 74, 0, 1)' },
+                }}>
+                MINT
+              </Button>
+            </Box>
+          </Box>
+          <Box
+            display='flex'
+            flexDirection='column'
+            alignItems='center'
+            alignSelf='center'
+            paddingX='37px'>
+            {matches && (
+              <Stack direction='row'>
+                <IconButton
+                  disableTouchRipple
+                  href='#beesUtilities'
+                  aria-label='scroll down'
+                  sx={{
+                    ':hover': {
+                      backgroundColor: 'rgba(0, 0, 0, 0.00)',
+                      opacity: '0.75',
+                    },
+                  }}>
+                  <ArrowIcon />
+                </IconButton>
+                <Typography
+                  sx={{
+                    alignSelf: 'center',
+                    textAlign: 'center',
+                    fontSize: '12px',
+                    fontWeight: '600',
+                    fontFamily: 'Montserrat',
+                    letterSpacing: '0.24em',
+                    color: '#6C3900',
+                    paddingX: '8px',
+                  }}>
+                  SCROLL DOWN
+                </Typography>
+              </Stack>
+            )}
+            <Stack
+              justifyContent='space-between'
+              width='196px'
+              direction='row'
+              sx={{
+                alignItems: { xs: 'flex-end', sm: 'space-between' },
+              }}>
               <IconButton
                 disableTouchRipple
-                href='#beesUtilities'
-                aria-label='scroll down'
+                href='https://discord.com/'
+                aria-label='discord'
                 sx={{
                   ':hover': {
                     backgroundColor: 'rgba(0, 0, 0, 0.00)',
                     opacity: '0.75',
                   },
                 }}>
-                <ArrowIcon />
+                <Image src={Discord} />
               </IconButton>
-              <Typography
+              <IconButton
+                disableTouchRipple
+                href='https://twitter.com/'
+                aria-label='twitter'
                 sx={{
-                  alignSelf: 'center',
-                  textAlign: 'center',
-                  fontSize: '12px',
-                  fontWeight: '600',
-                  fontFamily: 'Montserrat',
-                  letterSpacing: '0.24em',
-                  color: '#6C3900',
-                  paddingX: '8px',
+                  ':hover': {
+                    backgroundColor: 'rgba(0, 0, 0, 0.00)',
+                    opacity: '0.75',
+                  },
                 }}>
-                SCROLL DOWN
-              </Typography>
+                <Image src={Twitter} />
+              </IconButton>
+              <IconButton
+                disableTouchRipple
+                href='https://instagram.com/'
+                aria-label='instagram'
+                sx={{
+                  ':hover': {
+                    backgroundColor: 'rgba(0, 0, 0, 0.00)',
+                    opacity: '0.75',
+                  },
+                }}>
+                <Image src={Instagram} />
+              </IconButton>
             </Stack>
-          )}
-          <Stack
-            justifyContent='space-between'
-            width='196px'
-            direction='row'
-            sx={{
-              alignItems: { xs: 'flex-end', sm: 'space-between' },
-            }}>
-            <IconButton
-              disableTouchRipple
-              href='https://discord.com/'
-              aria-label='discord'
-              sx={{
-                ':hover': {
-                  backgroundColor: 'rgba(0, 0, 0, 0.00)',
-                  opacity: '0.75',
-                },
-              }}>
-              <Image src={Discord} />
-            </IconButton>
-            <IconButton
-              disableTouchRipple
-              href='https://twitter.com/'
-              aria-label='twitter'
-              sx={{
-                ':hover': {
-                  backgroundColor: 'rgba(0, 0, 0, 0.00)',
-                  opacity: '0.75',
-                },
-              }}>
-              <Image src={Twitter} />
-            </IconButton>
-            <IconButton
-              disableTouchRipple
-              href='https://instagram.com/'
-              aria-label='instagram'
-              sx={{
-                ':hover': {
-                  backgroundColor: 'rgba(0, 0, 0, 0.00)',
-                  opacity: '0.75',
-                },
-              }}>
-              <Image src={Instagram} />
-            </IconButton>
-          </Stack>
+          </Box>
         </Box>
       </Box>
       <Box
