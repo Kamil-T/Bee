@@ -153,9 +153,9 @@ const BeesTraits = () => {
             onClick={() => {
               handleChange('minus')
             }}
-            minWidth='45px'
-            minHeight='45px'
             sx={{
+              minWidth: '45px',
+              minHeight: '45px',
               transform: 'rotate(90deg)',
               ':hover': {
                 opacity: '0.75',
@@ -199,9 +199,9 @@ const BeesTraits = () => {
             onClick={() => {
               handleChange('plus')
             }}
-            minWidth='45px'
-            minHeight='45px'
             sx={{
+              minWidth: '45px',
+              minHeight: '45px',
               transform: 'rotate(270deg)',
               ':hover': {
                 opacity: '0.75',

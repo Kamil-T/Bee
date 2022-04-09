@@ -92,7 +92,8 @@ const Navbar = () => {
         pt: { xs: '15px', md: '34px' },
         maxWidth: { xs: '100vw', sm: '1460px' },
       }}>
-      <IconButton sx={{ marginTop: '65px', marginRight: 'auto' }}>
+      <IconButton
+        sx={{ marginTop: '65px', marginRight: 'auto', zIndex: '9999' }}>
         <Image src={BumbleParty} width={220} height={155} />
       </IconButton>
       {matches ? (
@@ -122,7 +123,7 @@ const Navbar = () => {
               sx: {
                 boxShadow: 'none',
                 maxWidth: '100vw',
-                maxHeight: 'calc(100vh - 55px)',
+                maxHeight: 'calc(100vh - 65px)',
                 height: '100%',
                 backgroundImage: `url(${UpperSectionBg.src})`,
                 backgroundPosition: 'center -60px',
@@ -135,14 +136,13 @@ const Navbar = () => {
             transformOrigin={{
               vertical: 'top',
               horizontal: 'center',
-            }}
-            anchorReference='anchorPosition'
-            anchorPosition={{ top: 100, left: 200 }}>
+            }}>
             <MenuList
               sx={{
                 padding: '32px 48px',
                 display: 'flex',
                 flexDirection: 'column',
+                alignItems: 'flex-end',
                 gap: '25px',
                 width: '100vw',
                 height: 'calc(97vh - 90px )',

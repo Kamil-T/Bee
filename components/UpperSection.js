@@ -10,6 +10,7 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import Image from 'next/image'
 import UpperSectionBg from '../images/UpperSectionBg.svg'
 import LetItBee from '../images/letitbee.svg'
+import Honey from '../images/Honey.svg'
 import BigBee from '../images/bigbee.png'
 import MintBeeBg from '../images/mintBeeBg.svg'
 import beeGlasses from '../images/beeglasses.png'
@@ -36,6 +37,7 @@ const UpperSection = () => {
       }}>
       <Navbar />
       <Box
+        zIndex='10'
         display='flex'
         flexDirection='column'
         alignItems='center'
@@ -72,12 +74,19 @@ const UpperSection = () => {
             }}>
             Lorem ipsum
           </Typography>
-          <Box maxWidth='100%' display='flex' justifyContent='center'>
+          <Box
+            maxWidth='100%'
+            display='flex'
+            justifyContent='center'
+            alignItems='center'
+            flexDirection='column'>
             <Box
               display='flex'
+              flexDirection='column'
               justifyContent='center'
               width='100vw'
               borderRadius='32px'
+              zIndex='25'
               sx={{
                 maxWidth: {
                   xs: '85%',
@@ -110,9 +119,21 @@ const UpperSection = () => {
                 Let it BEE!
               </Typography>
             </Box>
+            <Box
+              zIndex='1'
+              width='80%'
+              height='280px'
+              sx={{
+                transform: 'translateY(-65px)',
+                backgroundImage: `url(${Honey.src})`,
+                backgroundSize: '100%',
+                backgroundRepeat: 'no-repeat',
+              }}
+            />
           </Box>
           <Button
             sx={{
+              zIndex: '26',
               alignSelf: 'center',
               padding: '1em 2em',
               fontSize: { sx: '12px', sm: '14px', md: '16px' },
@@ -122,7 +143,7 @@ const UpperSection = () => {
               background: '#8A4A00',
               boxShadow: '0px 8px 16px #E18821',
               borderRadius: '100px',
-              transform: { xs: 'translateY(-5px)', sm: 'translateY(-15px)' },
+              transform: { xs: 'translateY(-5px)', sm: 'translateY(-270px)' },
               '&:hover': { backgroundColor: 'rgba(158, 74, 0, 1)' },
             }}>
             EXPLORE NOW!
@@ -132,6 +153,7 @@ const UpperSection = () => {
           display='flex'
           justifyContent='space-between'
           width='96%'
+          zIndex='1'
           sx={{
             margin: {
               xs: '35vw 0 0',
@@ -293,6 +315,7 @@ const UpperSection = () => {
       </Box>
       <Box
         id={styles.bigBee}
+        zIndex='50'
         alignSelf='center'
         position='absolute'
         bottom='-10px'
