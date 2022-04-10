@@ -119,35 +119,39 @@ const UpperSection = () => {
                 Let it BEE!
               </Typography>
             </Box>
+            <Button
+              sx={{
+                zIndex: '26',
+                alignSelf: 'center',
+                padding: '1em 2em',
+                fontSize: { sx: '12px', sm: '14px', md: '16px' },
+                fontFamily: 'Satoshi',
+                letterSpacing: '0.01em',
+                color: '#FFDE73',
+                background: '#8A4A00',
+                boxShadow: '0px 8px 16px #E18821',
+                borderRadius: '100px',
+                transform: {
+                  xs: 'translateY(-5px)',
+                  sm: 'translateY(-25px)',
+                },
+                '&:hover': { backgroundColor: 'rgba(158, 74, 0, 1)' },
+              }}>
+              EXPLORE NOW!
+            </Button>
             <Box
               zIndex='1'
               width='80%'
-              height='280px'
+              height='350px'
               sx={{
-                transform: 'translateY(-65px)',
+                transform: 'translateY(-120px)',
                 backgroundImage: `url(${Honey.src})`,
                 backgroundSize: '100%',
                 backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center 0px',
               }}
             />
           </Box>
-          <Button
-            sx={{
-              zIndex: '26',
-              alignSelf: 'center',
-              padding: '1em 2em',
-              fontSize: { sx: '12px', sm: '14px', md: '16px' },
-              fontFamily: 'Satoshi',
-              letterSpacing: '0.01em',
-              color: '#FFDE73',
-              background: '#8A4A00',
-              boxShadow: '0px 8px 16px #E18821',
-              borderRadius: '100px',
-              transform: { xs: 'translateY(-5px)', sm: 'translateY(-270px)' },
-              '&:hover': { backgroundColor: 'rgba(158, 74, 0, 1)' },
-            }}>
-            EXPLORE NOW!
-          </Button>
         </Box>
         <Box
           display='flex'
