@@ -28,7 +28,7 @@ const UpperSection = () => {
     <Container
       maxWidth='false'
       sx={{
-        minHeight: { xs: '185vw', sm: '1000px', md: '1037px' },
+        minHeight: { xs: '195vw', sm: '1000px', md: '1037px' },
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
@@ -133,7 +133,8 @@ const UpperSection = () => {
                 borderRadius: '100px',
                 transform: {
                   xs: 'translateY(-5px)',
-                  sm: 'translateY(-25px)',
+                  sm: 'translateY(-15px)',
+                  md: 'translateY(-25px)',
                 },
                 '&:hover': { backgroundColor: 'rgba(158, 74, 0, 1)' },
               }}>
@@ -142,99 +143,108 @@ const UpperSection = () => {
             <Box
               zIndex='1'
               width='80%'
-              height='350px'
               sx={{
+                height: { xs: '250px', sm: '315px', md: '280px', lg: '330px' },
                 transform: 'translateY(-120px)',
                 backgroundImage: `url(${Honey.src})`,
                 backgroundSize: '100%',
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center 0px',
+                backgroundPosition: {
+                  xs: 'center 30px',
+                  sm: 'center 10px',
+                  md: 'center 0px',
+                },
               }}
             />
           </Box>
         </Box>
         <Box
           display='flex'
-          justifyContent='space-between'
           width='96%'
           zIndex='1'
           sx={{
+            justifyContent: { xs: 'center', md: 'space-between' },
             margin: {
               xs: '35vw 0 0',
               sm: '150px 0 0',
-              md: 'auto 0 250px',
-              lg: 'auto 0 150px',
+              md: 'auto 0 75px',
+              lg: 'auto 0 25px',
               xl: 'auto 0 30px',
             },
           }}>
-          <Box display='flex' gap='16px'>
+          {matches && (
             <Box
               display='flex'
-              width='189px'
-              height='217px'
-              justifyContent='center'
-              alignItems='center'
-              sx={{ backgroundImage: `url(${MintBeeBg.src})` }}>
-              <Image src={beeGlasses} width={156} height={164} />
-            </Box>
-            <Box
-              display='flex'
-              flexDirection='column'
-              justifyContent='center'
-              maxWidth='194px'>
-              <Box>
-                <Typography
-                  component='span'
-                  sx={{
-                    fontFamily: 'Clash Grotesk',
-                    fontSize: '32px',
-                    fontWeight: '700',
-                    lineHeight: '32px',
-                    letterSpacing: '0em',
-                    color: 'white',
-                  }}>
-                  Mint
-                </Typography>{' '}
-                <Typography
-                  component='span'
-                  sx={{
-                    fontFamily: 'Clash Grotesk',
-                    fontSize: '32px',
-                    fontWeight: '700',
-                    lineHeight: '32px',
-                    letterSpacing: '0em',
-                    color: 'black',
-                  }}>
-                  Bee
-                </Typography>
+              gap='16px'
+              sx={{ flexDirection: { xs: 'column', xl: 'row' } }}>
+              <Box
+                display='flex'
+                width='189px'
+                height='217px'
+                justifyContent='center'
+                alignItems='center'
+                sx={{ backgroundImage: `url(${MintBeeBg.src})` }}>
+                <Image src={beeGlasses} width={156} height={164} />
               </Box>
-              <Typography
-                sx={{
-                  fontFamily: 'Montserrat',
-                  fontSize: '14px',
-                  lineHeight: '24px',
-                  letterSpacing: '0.01em',
-                  marginY: '8px',
-                }}>
-                Duis egestas rutrum erat vel finibus ipsum lorem.
-              </Typography>
-              <Button
-                sx={{
-                  alignSelf: 'center',
-                  padding: '1em 2em',
-                  fontSize: { sx: '12px', sm: '14px', md: '16px' },
-                  fontFamily: 'Satoshi',
-                  letterSpacing: '0.01em',
-                  color: '#FFDE73',
-                  background: '#8A4A00',
-                  boxShadow: '0px 8px 16px #E18821',
-                  borderRadius: '100px',
-                  '&:hover': { backgroundColor: 'rgba(158, 74, 0, 1)' },
-                }}>
-                MINT
-              </Button>
+              <Box
+                display='flex'
+                flexDirection='column'
+                justifyContent='center'
+                maxWidth='194px'>
+                <Box>
+                  <Typography
+                    component='span'
+                    sx={{
+                      fontFamily: 'Clash Grotesk',
+                      fontSize: '32px',
+                      fontWeight: '700',
+                      lineHeight: '32px',
+                      letterSpacing: '0em',
+                      color: 'white',
+                    }}>
+                    Mint
+                  </Typography>{' '}
+                  <Typography
+                    component='span'
+                    sx={{
+                      fontFamily: 'Clash Grotesk',
+                      fontSize: '32px',
+                      fontWeight: '700',
+                      lineHeight: '32px',
+                      letterSpacing: '0em',
+                      color: 'black',
+                    }}>
+                    Bee
+                  </Typography>
+                </Box>
+                <Typography
+                  sx={{
+                    fontFamily: 'Montserrat',
+                    fontSize: '14px',
+                    lineHeight: '24px',
+                    letterSpacing: '0.01em',
+                    marginY: '8px',
+                  }}>
+                  Duis egestas rutrum erat vel finibus ipsum lorem.
+                </Typography>
+                <Button
+                  sx={{
+                    alignSelf: 'center',
+                    padding: '1em 2em',
+                    fontSize: { sx: '12px', sm: '14px', md: '16px' },
+                    fontFamily: 'Satoshi',
+                    letterSpacing: '0.01em',
+                    color: '#FFDE73',
+                    background: '#8A4A00',
+                    boxShadow: '0px 8px 16px #E18821',
+                    borderRadius: '100px',
+                    '&:hover': { backgroundColor: 'rgba(158, 74, 0, 1)' },
+                  }}>
+                  MINT
+                </Button>
+              </Box>
             </Box>
-          </Box>
+          )}
           <Box
             display='flex'
             flexDirection='column'

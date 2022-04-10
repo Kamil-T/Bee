@@ -1,4 +1,5 @@
 import Stack from '@mui/material/Stack'
+import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Menu from '@mui/material/Menu'
 import MenuList from '@mui/material/MenuList'
@@ -92,10 +93,9 @@ const Navbar = () => {
         pt: { xs: '15px', md: '34px' },
         maxWidth: { xs: '100vw', sm: '1460px' },
       }}>
-      <IconButton
-        sx={{ marginTop: '65px', marginRight: 'auto', zIndex: '9999' }}>
+      <Box sx={{ marginTop: '65px', marginRight: 'auto', zIndex: '9999' }}>
         <Image src={BumbleParty} width={220} height={155} />
-      </IconButton>
+      </Box>
       {matches ? (
         <>
           <IconButton
