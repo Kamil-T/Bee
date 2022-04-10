@@ -229,9 +229,10 @@ const UpperSection = () => {
                 </Typography>
                 <Button
                   sx={{
-                    alignSelf: 'center',
-                    padding: '1em 2em',
-                    fontSize: { sx: '12px', sm: '14px', md: '16px' },
+                    width: '123px',
+                    paddingY: '14px',
+                    fontSize: '16px',
+                    fontWeight: '900',
                     fontFamily: 'Satoshi',
                     letterSpacing: '0.01em',
                     color: '#FFDE73',
@@ -251,35 +252,6 @@ const UpperSection = () => {
             alignItems='center'
             alignSelf='center'
             paddingX='37px'>
-            {matches && (
-              <Stack direction='row'>
-                <IconButton
-                  disableTouchRipple
-                  href='#beesUtilities'
-                  aria-label='scroll down'
-                  sx={{
-                    ':hover': {
-                      backgroundColor: 'rgba(0, 0, 0, 0.00)',
-                      opacity: '0.75',
-                    },
-                  }}>
-                  <ArrowIcon />
-                </IconButton>
-                <Typography
-                  sx={{
-                    alignSelf: 'center',
-                    textAlign: 'center',
-                    fontSize: '12px',
-                    fontWeight: '600',
-                    fontFamily: 'Montserrat',
-                    letterSpacing: '0.24em',
-                    color: '#6C3900',
-                    paddingX: '8px',
-                  }}>
-                  SCROLL DOWN
-                </Typography>
-              </Stack>
-            )}
             <Stack
               justifyContent='space-between'
               width='196px'
@@ -324,6 +296,35 @@ const UpperSection = () => {
                 <Image src={Instagram} />
               </IconButton>
             </Stack>
+            {matches && (
+              <Stack direction='row'>
+                <IconButton
+                  disableTouchRipple
+                  href='#beesUtilities'
+                  aria-label='scroll down'
+                  sx={{
+                    ':hover': {
+                      backgroundColor: 'rgba(0, 0, 0, 0.00)',
+                      opacity: '0.75',
+                    },
+                  }}>
+                  <ArrowIcon />
+                </IconButton>
+                <Typography
+                  sx={{
+                    alignSelf: 'center',
+                    textAlign: 'center',
+                    fontSize: '12px',
+                    fontWeight: '600',
+                    fontFamily: 'Montserrat',
+                    letterSpacing: '0.24em',
+                    color: '#6C3900',
+                    paddingX: '8px',
+                  }}>
+                  SCROLL DOWN
+                </Typography>
+              </Stack>
+            )}
           </Box>
         </Box>
       </Box>
