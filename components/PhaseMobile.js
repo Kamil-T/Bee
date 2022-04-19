@@ -19,7 +19,7 @@ const PhaseMobile = ({ text, expanded, setExpanded, defExpanded = false }) => {
         onChange={handleChange(`panel${text}`)}
         disableGutters
         sx={{
-          maxWidth: 'min-content',
+          maxWidth: 'max-content',
           backgroundColor: '#DB8116',
           boxShadow: 'none',
         }}>
@@ -33,7 +33,6 @@ const PhaseMobile = ({ text, expanded, setExpanded, defExpanded = false }) => {
           aria-controls={`phase${text}`}
           id={`phase${text}`}
           sx={{
-            width: '50vw',
             paddingX: '5px',
             background: '#E9A00A',
             height: '76px',

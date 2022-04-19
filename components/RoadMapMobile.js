@@ -23,6 +23,7 @@ const RoadMapMobile = () => {
       <Box display='flex' flexDirection='column' alignItems='center'>
         <Typography
           sx={{
+            textAlign: 'center',
             marginBottom: '15px',
             fontFamily: 'Clash Grotesk',
             fontWeight: '600',
@@ -35,6 +36,7 @@ const RoadMapMobile = () => {
         </Typography>
         <Typography
           sx={{
+            textAlign: 'center',
             fontFamily: 'Clash Grotesk',
             fontWeight: '700',
             fontSize: '64px',
