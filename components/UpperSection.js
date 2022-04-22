@@ -13,7 +13,7 @@ import LetItBee from '../images/letitbee.svg'
 import Honey from '../images/Honey.svg'
 import BigBee from '../images/bigbee.png'
 import MintBeeBg from '../images/mintBeeBg.svg'
-import beeGlasses from '../images/beeglasses.png'
+import MintBee from '../images/MintBee.png'
 import ArrowIcon from './ArrowIcon'
 import Discord from '../images/DiscordIcon.svg'
 import Twitter from '../images/TwitterIcon.svg'
@@ -184,7 +184,7 @@ const UpperSection = () => {
                 justifyContent='center'
                 alignItems='center'
                 sx={{ backgroundImage: `url(${MintBeeBg.src})` }}>
-                <Image src={beeGlasses} width={156} height={164} />
+                <Image src={MintBee} width={156} height={164} />
               </Box>
               <Box
                 display='flex'

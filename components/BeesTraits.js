@@ -6,27 +6,29 @@ import ArrowIcon from './ArrowIcon'
 import Image from 'next/image'
 import BeesTraitsBg from '../images/BeesTraitsBg.svg'
 import Beebackground from '../images/beesTraitsbeebg.svg'
-import glass from '../images/glassestrait.png'
-import gun from '../images/gun.png'
-import wing from '../images/wingstrait.png'
-import hat from '../images/hat.png'
-import HatsBee from '../images/HatsBee.png'
-import GunsBee from '../images/GunsBee.png'
-import MasksBee from '../images/MasksBee.png'
-import WingsBee from '../images/WingsBee.png'
-import BowtieBee from '../images/BowtieBee.png'
-import GlassesBee from '../images/GlassesBee.png'
+import TraitGlasses from '../images/TraitGlasses.png'
+import TraitHat from '../images/TraitHat.png'
+import TraitClothes from '../images/TraitClothes.png'
+import TraitMouth from '../images/TraitMouth.png'
+import TraitHand from '../images/TraitHand.png'
+import TraitWings from '../images/TraitWings.png'
+import BeeHat from '../images/BeeHat.png'
+import BeeHand from '../images/BeeHand.png'
+import BeeFace from '../images/BeeFace.png'
+import BeeWings from '../images/BeeWings.png'
+import BeeClothes from '../images/BeeClothes.png'
+import BeeGlasses from '../images/BeeGlasses.png'
 import styles from '../styles/BeesTraits.module.css'
 import { useState } from 'react'
 
 const BeesTraits = () => {
   const traits = {
-    1: { image: GlassesBee, name: 'Glasses' },
-    2: { image: HatsBee, name: 'Hats' },
-    3: { image: WingsBee, name: 'Wings' },
-    4: { image: HatsBee, name: 'Masks' },
-    5: { image: GunsBee, name: 'Guns' },
-    6: { image: HatsBee, name: 'Hats' },
+    1: { image: BeeGlasses, name: 'Glasses' },
+    2: { image: BeeHat, name: 'Hats' },
+    3: { image: BeeFace, name: 'Mouths' },
+    4: { image: BeeClothes, name: 'Clothes' },
+    5: { image: BeeHand, name: 'Hands' },
+    6: { image: BeeWings, name: 'Wings' },
   }
 
   const [count, setCount] = useState(1)
@@ -132,7 +134,6 @@ const BeesTraits = () => {
           <Box
             sx={{
               marginTop: { xs: '-55px', sm: '-70px', md: '-55px', lg: '-70px' },
-              clipPath: 'polygon(0 0, 100% 0, 100% 71%, 50% 99%, 0 71%)',
             }}>
             <Image
               src={`${traits[count].image.src}`}
@@ -246,7 +247,7 @@ const BeesTraits = () => {
               setCount(1)
             }}
             className={styles.traitBg}>
-            <Image src={glass} width={139} height={119} />
+            <Image src={TraitGlasses} width={139} height={119} />
           </Box>
         </Box>
         <Box
@@ -260,7 +261,7 @@ const BeesTraits = () => {
               setCount(2)
             }}
             className={styles.traitBg}>
-            <Image src={hat} height={119} />
+            <Image src={TraitHat} height={119} />
           </Box>
         </Box>
         <Box
@@ -274,7 +275,7 @@ const BeesTraits = () => {
               setCount(3)
             }}
             className={styles.traitBg}>
-            <Image src={wing} height={119} />
+            <Image src={TraitMouth} height={119} />
           </Box>
         </Box>
         <Box
@@ -288,7 +289,7 @@ const BeesTraits = () => {
               setCount(4)
             }}
             className={styles.traitBg}>
-            <Image src={hat} height={119} />
+            <Image src={TraitClothes} height={119} />
           </Box>
         </Box>
         <Box
@@ -302,7 +303,7 @@ const BeesTraits = () => {
               setCount(5)
             }}
             className={styles.traitBg}>
-            <Image src={gun} height={119} />
+            <Image src={TraitHand} height={119} />
           </Box>
         </Box>
         <Box
@@ -316,7 +317,7 @@ const BeesTraits = () => {
               setCount(6)
             }}
             className={styles.traitBg}>
-            <Image src={hat} height={119} />
+            <Image src={TraitWings} height={119} />
           </Box>
         </Box>
       </Box>
