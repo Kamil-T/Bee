@@ -93,7 +93,13 @@ const Navbar = () => {
         pt: { xs: '15px', md: '34px' },
         maxWidth: { xs: '100vw', sm: '1460px' },
       }}>
-      <Box sx={{ marginTop: '65px', marginRight: 'auto', zIndex: '9999' }}>
+      <Box
+        sx={{
+          maxWidth: { xs: '150px', sm: 'false' },
+          marginTop: '65px',
+          marginRight: 'auto',
+          zIndex: '9999',
+        }}>
         <Image src={BumbleParty} width={220} height={155} />
       </Box>
       {matches ? (

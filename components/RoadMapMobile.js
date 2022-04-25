@@ -15,7 +15,6 @@ const RoadMapMobile = () => {
         flexDirection: 'column',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        minHeight: '950px',
         paddingTop: '72px',
         paddingBottom: '76px',
         background: '#DB8116',

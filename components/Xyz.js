@@ -56,6 +56,7 @@ const Xyz = () => {
           fontSize: '14px',
           lineHeight: '24px',
           letterSpacing: '0.01em',
+          textAlign: { xs: 'center', md: 'left' },
         }}>
         Duis egestas rutrum erat vel finibus. Lorem ipsum dolor. Donec dapibus
         purus eget nisl efficitur, at porttitor ex accumsan.
