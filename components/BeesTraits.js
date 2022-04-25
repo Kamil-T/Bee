@@ -169,23 +169,24 @@ const BeesTraits = () => {
             display='flex'
             alignItems='center'
             justifyContent='center'
+            width='100%'
             height='76px'
             borderRadius='16px'
             sx={{
-              marginX: { xs: '0px', sm: '32px', md: '15px', lg: '32px' },
               paddingX: { xs: '15px', sm: '20px', md: '20px', lg: '30px' },
               backgroundColor: '#DB8216',
               transform: 'matrix(1, -0.03, 0.03, 1, 0, 0)',
             }}>
             <Typography
               sx={{
+                textAlign: 'center',
                 fontFamily: 'Clash Grotesk',
                 fontWeight: '700',
                 fontSize: {
-                  xs: '4vw',
-                  sm: '29px',
-                  md: '18px',
-                  lg: '24px',
+                  xs: '6vw',
+                  sm: '32px',
+                  md: '16px',
+                  lg: '26px',
                   xl: '32px',
                 },
                 lineHeight: '32px',
@@ -261,7 +262,7 @@ const BeesTraits = () => {
               setCount(2)
             }}
             className={styles.traitBg}>
-            <Image src={TraitHat} height={119} />
+            <Image src={TraitHat} height={119} width={139} />
           </Box>
         </Box>
         <Box
@@ -275,7 +276,7 @@ const BeesTraits = () => {
               setCount(3)
             }}
             className={styles.traitBg}>
-            <Image src={TraitMouth} height={119} />
+            <Image src={TraitMouth} height={119} width={139} />
           </Box>
         </Box>
         <Box
@@ -289,7 +290,7 @@ const BeesTraits = () => {
               setCount(4)
             }}
             className={styles.traitBg}>
-            <Image src={TraitClothes} height={119} />
+            <Image src={TraitClothes} height={119} width={139} />
           </Box>
         </Box>
         <Box
@@ -303,7 +304,7 @@ const BeesTraits = () => {
               setCount(5)
             }}
             className={styles.traitBg}>
-            <Image src={TraitHand} height={119} />
+            <Image src={TraitHand} height={119} width={139} />
           </Box>
         </Box>
         <Box
@@ -317,7 +318,7 @@ const BeesTraits = () => {
               setCount(6)
             }}
             className={styles.traitBg}>
-            <Image src={TraitWings} height={119} />
+            <Image src={TraitWings} height={119} width={139} />
           </Box>
         </Box>
       </Box>
