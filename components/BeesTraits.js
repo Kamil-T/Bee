@@ -124,6 +124,8 @@ const BeesTraits = () => {
         alignItems='center'
         marginTop='-5px'>
         <Box
+          maxHeight='590px'
+          maxWidth='570px'
           marginTop='55px'
           sx={{
             backgroundImage: `url(${Beebackground.src})`,
@@ -133,12 +135,12 @@ const BeesTraits = () => {
           }}>
           <Box
             sx={{
-              marginTop: { xs: '-55px', sm: '-70px', md: '-55px', lg: '-70px' },
+              clipPath: 'polygon(0 0, 100% 0, 100% 68%, 50% 100%, 0 68%)',
             }}>
             <Image
               src={`${traits[count].image.src}`}
-              height={569}
-              width={493}
+              height={570}
+              width={580}
             />
           </Box>
         </Box>
