@@ -52,8 +52,8 @@ const BeesTraits = () => {
         flexDirection: { xs: 'column', md: 'row' },
         alignItems: 'center',
         gap: { xs: '50px', md: '0px' },
-        minHeight: { xs: 'false', md: '700px', lg: '997px' },
-        paddingY: { xs: '50px', md: '0px' },
+        minHeight: { xs: 'false', md: '600px', lg: '997px' },
+        paddingY: { xs: '50px', lg: '0px' },
         background: '#8A4A00',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -64,7 +64,7 @@ const BeesTraits = () => {
         flexDirection='column'
         sx={{
           marginBottom: { xs: '0px', md: '70px' },
-          maxWidth: { xs: '340px', md: '220px', lg: '280px', xl: '340px' },
+          maxWidth: { xs: '340px', md: '200px', lg: '280px', xl: '340px' },
           marginRight: { md: '10px', xl: '30px' },
           marginLeft: { md: '10px' },
         }}>
@@ -75,7 +75,7 @@ const BeesTraits = () => {
             fontSize: {
               xs: '20px',
               sm: '16px',
-              md: '16px',
+              md: '14px',
               lg: '20px',
               xl: '24px',
             },
@@ -85,13 +85,13 @@ const BeesTraits = () => {
         </Typography>
         <Typography
           sx={{
-            marginBottom: '40px',
+            marginBottom: { xs: '40px', md: '20px', lg: '40px' },
             fontFamily: 'Clash Grotesk',
             fontWeight: '700',
             fontSize: {
               xs: '54px',
               sm: '64px',
-              md: '42px',
+              md: '38px',
               lg: '54px',
               xl: '64px',
             },
@@ -106,7 +106,7 @@ const BeesTraits = () => {
             fontSize: {
               xs: '16px',
               sm: '20px',
-              md: '16px',
+              md: '14px',
               lg: '18px',
               xl: '20px',
             },
@@ -146,19 +146,19 @@ const BeesTraits = () => {
         </Box>
         <Box
           width='100%'
-          marginTop='-75px'
           display='flex'
           justifyContent='space-between'
           alignItems='center'
-          gap='10px'>
+          gap='10px'
+          sx={{ marginTop: { xs: '-75px', md: '-50px', lg: '-75px' } }}>
           <IconButton
             disableTouchRipple
             onClick={() => {
               handleChange('minus')
             }}
             sx={{
-              minWidth: '45px',
-              minHeight: '45px',
+              width: { xs: '65px', md: '50px', lg: '65px' },
+              height: { xs: '65px', md: '50px', lg: '65px' },
               transform: 'rotate(90deg)',
               ':hover': {
                 opacity: '0.75',
@@ -172,10 +172,10 @@ const BeesTraits = () => {
             alignItems='center'
             justifyContent='center'
             width='100%'
-            height='76px'
             borderRadius='16px'
             sx={{
-              paddingX: { xs: '15px', sm: '20px', md: '20px', lg: '30px' },
+              height: { xs: '76px', md: '60px', lg: '76px' },
+              paddingX: { xs: '15px', sm: '20px', lg: '30px' },
               backgroundColor: '#DB8216',
               transform: 'matrix(1, -0.03, 0.03, 1, 0, 0)',
             }}>
@@ -204,8 +204,8 @@ const BeesTraits = () => {
               handleChange('plus')
             }}
             sx={{
-              minWidth: '45px',
-              minHeight: '45px',
+              width: { xs: '65px', md: '50px', lg: '65px' },
+              height: { xs: '65px', md: '50px', lg: '65px' },
               transform: 'rotate(270deg)',
               ':hover': {
                 opacity: '0.75',
@@ -221,7 +221,7 @@ const BeesTraits = () => {
             marginTop: '17px',
             maxWidth: '493px',
             fontFamily: 'Montserrat',
-            fontSize: '14px',
+            fontSize: { xs: '14px', md: '12px', lg: '14px' },
             fontWeight: '500',
             lineHeight: '24px',
             letterSpacing: '0.01em',

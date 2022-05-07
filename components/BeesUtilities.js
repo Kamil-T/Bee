@@ -27,7 +27,6 @@ const BeesUtilities = () => {
           paddingTop: {
             xs: '45px',
             sm: '60px',
-            md: '85px',
             lg: '100px',
             xl: '111px',
           },
@@ -37,7 +36,7 @@ const BeesUtilities = () => {
           sx={{
             fontFamily: 'Clash Grotesk',
             fontWeight: '600',
-            fontSize: { xs: '20px', sm: '24px' },
+            fontSize: { xs: '20px', sm: '24px', md: '22px', lg: '24px' },
             lineHeight: '24px',
             color: 'white',
             marginTop: { xs: '10px', md: '28px' },
@@ -50,8 +49,12 @@ const BeesUtilities = () => {
           sx={{
             fontFamily: 'Clash Grotesk',
             fontWeight: '700',
-            fontSize: { xs: '44px', sm: '58px', md: '64px' },
-            margin: { xs: '16px 0 25px 6px', md: '16px 0 70px 6px' },
+            fontSize: { xs: '44px', sm: '58px', md: '60px', lg: '64px' },
+            margin: {
+              xs: '16px 0 25px 6px',
+              md: '16px 0 50px 6px',
+              lg: '16px 0 70px 6px',
+            },
             lineHeight: '64px',
             letterSpacing: '0.001rem',
           }}>
@@ -60,11 +63,11 @@ const BeesUtilities = () => {
         <Box
           marginBottom='40px'
           display='flex'
-          maxWidth='1000px'
           justifyContent='space-between'
           sx={{
+            maxWidth: { xs: '800px', lg: '1000px' },
             flexDirection: { xs: 'column', md: 'row' },
-            gap: { xs: '35px', md: '70px' },
+            gap: { xs: '35px', lg: '70px' },
           }}>
           <Xyz />
           <Xyz />

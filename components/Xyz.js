@@ -13,13 +13,13 @@ const Xyz = () => {
         display='flex'
         justifyContent='center'
         alignItems='center'
-        width='119px'
-        height='71.38px'
         marginY='20px'
-        marginRight='24px'
         borderRadius='16px'
         position='relative'
         sx={{
+          marginRight: { xs: '24px', md: '20px', lg: '24px' },
+          width: { xs: '119px', md: '90px', lg: '119px' },
+          height: { xs: '71.38px', md: '61.38px', lg: '71.38px' },
           background: 'linear-gradient(to bottom, #DB8116, #F6AD0B)',
           transform: 'rotate(-2.41deg)',
         }}>
@@ -27,18 +27,18 @@ const Xyz = () => {
           display='flex'
           justifyContent='center'
           alignItems='center'
-          width='119px'
-          height='71.38px'
           borderRadius='16px'
           border='2px solid transparent'
           sx={{
+            width: { xs: '119px', md: '90px', lg: '119px' },
+            height: { xs: '71.38px', md: '61.38px', lg: '71.38px' },
             background: '#DB8216',
             backgroundClip: 'padding-box',
           }}>
           <Typography
             sx={{
               fontFamily: 'Clash Grotesk',
-              fontSize: '32px',
+              fontSize: { xs: '32px', md: '28px', lg: '32px' },
               fontWeight: '700',
               lineHeight: '32px',
               letterSpacing: '0em',
@@ -53,8 +53,8 @@ const Xyz = () => {
         sx={{
           maxWidth: '341px',
           fontFamily: 'Montserrat',
-          fontSize: '14px',
-          lineHeight: '24px',
+          fontSize: { xs: '14px', md: '12px', lg: '14px' },
+          lineHeight: { xs: '24px', md: '20px', lg: '24px' },
           letterSpacing: '0.01em',
           textAlign: { xs: 'center', md: 'left' },
         }}>

@@ -28,7 +28,7 @@ const UpperSection = () => {
     <Container
       maxWidth='false'
       sx={{
-        minHeight: { xs: '195vw', sm: '1000px', md: '1037px' },
+        minHeight: { xs: '195vw', sm: '1000px', md: '950px', lg: '1037px' },
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
@@ -45,7 +45,12 @@ const UpperSection = () => {
         alignSelf='center'
         borderRadius='32px'
         sx={{
-          maxWidth: { xs: '100vw', sm: '1530px' },
+          maxWidth: {
+            xs: '100vw',
+            sm: '1530px',
+            md: '90vw',
+            xl: '1530px',
+          },
           maxHeight: { xs: '145vw', sm: '749px' },
           background:
             ' linear-gradient(81.29deg, #FFA232 11.63%, #FFD977 80.12%)',
@@ -66,7 +71,7 @@ const UpperSection = () => {
           <Typography
             sx={{
               fontFamily: 'Clash Grotesk',
-              fontSize: { xs: '35px', sm: '60px', md: '64px', lg: '72px' },
+              fontSize: { xs: '35px', sm: '60px', md: '56px', lg: '72px' },
               maxHeight: '97px',
               fontWeight: '700',
               letterSpacing: '0.005rem',
@@ -90,8 +95,7 @@ const UpperSection = () => {
               sx={{
                 maxWidth: {
                   xs: '85%',
-                  sm: '85%',
-                  md: '750px',
+                  md: '650px',
                   lg: '911px',
                 },
                 background: '#DB8216',
@@ -106,7 +110,6 @@ const UpperSection = () => {
                   fontSize: {
                     xs: '50px',
                     sm: '85px',
-                    md: '100px',
                     lg: '150.5px',
                   },
                   lineHeight: '109%',
@@ -124,7 +127,7 @@ const UpperSection = () => {
                 zIndex: '26',
                 alignSelf: 'center',
                 padding: '1em 2em',
-                fontSize: { sx: '12px', sm: '14px', md: '16px' },
+                fontSize: { sx: '12px', sm: '14px', md: '15px', lg: '16px' },
                 fontFamily: 'Satoshi',
                 letterSpacing: '0.01em',
                 color: '#FFDE73',
@@ -134,7 +137,6 @@ const UpperSection = () => {
                 transform: {
                   xs: 'translateY(-5px)',
                   sm: 'translateY(-15px)',
-                  md: 'translateY(-25px)',
                 },
                 '&:hover': { backgroundColor: 'rgba(158, 74, 0, 1)' },
               }}>
@@ -167,7 +169,7 @@ const UpperSection = () => {
             margin: {
               xs: '35vw 0 0',
               sm: '150px 0 0',
-              md: 'auto 0 75px',
+              md: 'auto 0 90px',
               lg: 'auto 0 25px',
               xl: 'auto 0 30px',
             },
@@ -175,15 +177,23 @@ const UpperSection = () => {
           {matches && (
             <Box
               display='flex'
-              gap='16px'
-              sx={{ flexDirection: { xs: 'column', xl: 'row' } }}>
+              sx={{
+                flexDirection: { xs: 'column', xl: 'row' },
+                gap: { xs: '16px', md: '8px', lg: '16px' },
+              }}>
               <Box
                 display='flex'
-                width='189px'
+                width='150px'
                 height='217px'
                 justifyContent='center'
                 alignItems='center'
-                sx={{ backgroundImage: `url(${MintBeeBg.src})` }}>
+                sx={{
+                  width: { xs: '189px', md: '150px', lg: '189px' },
+                  backgroundImage: `url(${MintBeeBg.src})`,
+                  backgroundSize: 'contain',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                }}>
                 <Image src={MintBee} width={156} height={164} />
               </Box>
               <Box
@@ -250,8 +260,10 @@ const UpperSection = () => {
             display='flex'
             flexDirection='column'
             alignItems='center'
-            alignSelf='center'
-            paddingX='37px'>
+            paddingX='37px'
+            sx={{
+              alignSelf: { xs: 'center', md: 'flex-start', lg: 'center' },
+            }}>
             <Stack
               justifyContent='space-between'
               width='196px'
@@ -334,7 +346,7 @@ const UpperSection = () => {
         alignSelf='center'
         position='absolute'
         bottom='-10px'
-        sx={{ maxWidth: { xs: '75%', sm: '100%' } }}>
+        sx={{ maxWidth: { xs: '75%', sm: '100%', md: '50%', lg: '100%' } }}>
         <Image src={BigBee} alt='' />
       </Box>
     </Container>

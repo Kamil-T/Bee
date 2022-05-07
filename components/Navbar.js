@@ -14,7 +14,7 @@ import UpperSectionBg from '../images/UpperSectionBg.svg'
 import Image from 'next/image'
 
 const Navbar = () => {
-  const LinkStyled = styled(Link)(() => ({
+  const LinkStyled = styled(Link)(({ theme }) => ({
     all: 'unset',
     fontFamily: 'Montserrat',
     fontWeight: '500',
@@ -28,6 +28,12 @@ const Navbar = () => {
       backgroundColor: 'transparent',
     },
     width: 'fit-Content',
+
+    [theme.breakpoints.only('md')]: {
+      paddingLeft: '16px',
+      paddingRight: '16px',
+      fontSize: '14px',
+    },
   }))
 
   const Links = () => {
@@ -50,12 +56,12 @@ const Navbar = () => {
         </LinkStyled>
         <Button
           sx={{
-            width: { xs: '100%', md: '158px' },
-            height: '56px',
+            width: { xs: '100%', md: '134px', lg: '158px' },
+            height: { xs: '56px', md: '50px', lg: '56px' },
             background: '#8A4A00',
             borderRadius: '100px',
             color: '#FFDE73',
-            fontSize: { xs: '12px', md: '16px' },
+            fontSize: { xs: '12px', md: '14px', lg: '16px' },
             fontFamily: 'Satoshi',
             letterSpacing: '0.01rem',
             fontWeight: '900',
@@ -90,12 +96,13 @@ const Navbar = () => {
       height='90px'
       marginBottom='34px'
       sx={{
-        pt: { xs: '15px', md: '34px' },
-        maxWidth: { xs: '100vw', sm: '1460px' },
+        pt: { xs: '15px', md: '28px', lg: '34px' },
+        maxWidth: { xs: '100vw', md: '80vw', lg: '85vw', xl: '1460px' },
+        height: { xs: '90px', md: '70px', lg: '90px' },
       }}>
       <Box
         sx={{
-          maxWidth: { xs: '150px', sm: 'false' },
+          maxWidth: { xs: '150px', sm: 'false', md: '140px', lg: 'false' },
           marginTop: '65px',
           marginRight: 'auto',
           zIndex: '9999',
