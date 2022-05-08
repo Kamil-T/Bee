@@ -28,7 +28,13 @@ const UpperSection = () => {
     <Container
       maxWidth='false'
       sx={{
-        minHeight: { xs: '195vw', sm: '1000px', md: '950px', lg: '1037px' },
+        minHeight: {
+          xs: '195vw',
+          sm: '1000px',
+          md: '925px',
+          lg: '950px',
+          xl: '1037px',
+        },
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
@@ -51,7 +57,12 @@ const UpperSection = () => {
             md: '90vw',
             xl: '1530px',
           },
-          maxHeight: { xs: '145vw', sm: '749px' },
+          maxHeight: {
+            xs: '145vw',
+            sm: '749px',
+            md: '735px',
+            xl: '749px',
+          },
           background:
             ' linear-gradient(81.29deg, #FFA232 11.63%, #FFD977 80.12%)',
         }}>
@@ -71,7 +82,13 @@ const UpperSection = () => {
           <Typography
             sx={{
               fontFamily: 'Clash Grotesk',
-              fontSize: { xs: '35px', sm: '60px', md: '56px', lg: '72px' },
+              fontSize: {
+                xs: '35px',
+                sm: '60px',
+                md: '56px',
+                lg: '66px',
+                xl: '72px',
+              },
               maxHeight: '97px',
               fontWeight: '700',
               letterSpacing: '0.005rem',
@@ -96,7 +113,8 @@ const UpperSection = () => {
                 maxWidth: {
                   xs: '85%',
                   md: '650px',
-                  lg: '911px',
+                  lg: '770px',
+                  xl: '911px',
                 },
                 background: '#DB8216',
                 border:
@@ -110,7 +128,8 @@ const UpperSection = () => {
                   fontSize: {
                     xs: '50px',
                     sm: '85px',
-                    lg: '150.5px',
+                    lg: '120px',
+                    xl: '150.5px',
                   },
                   lineHeight: '109%',
                   fontWeight: '700',
@@ -170,7 +189,7 @@ const UpperSection = () => {
               xs: '35vw 0 0',
               sm: '150px 0 0',
               md: 'auto 0 90px',
-              lg: 'auto 0 25px',
+              lg: 'auto 0 40px',
               xl: 'auto 0 30px',
             },
           }}>
@@ -179,7 +198,7 @@ const UpperSection = () => {
               display='flex'
               sx={{
                 flexDirection: { xs: 'column', xl: 'row' },
-                gap: { xs: '16px', md: '8px', lg: '16px' },
+                gap: { xs: '16px', md: '8px', lg: '12px', xl: '16px' },
               }}>
               <Box
                 display='flex'
@@ -188,7 +207,7 @@ const UpperSection = () => {
                 justifyContent='center'
                 alignItems='center'
                 sx={{
-                  width: { xs: '189px', md: '150px', lg: '189px' },
+                  width: { xs: '189px', md: '150px', lg: '169px', xl: '189px' },
                   backgroundImage: `url(${MintBeeBg.src})`,
                   backgroundSize: 'contain',
                   backgroundPosition: 'center',
@@ -346,7 +365,14 @@ const UpperSection = () => {
         alignSelf='center'
         position='absolute'
         bottom='-10px'
-        sx={{ maxWidth: { xs: '75%', sm: '100%', md: '50%', lg: '100%' } }}>
+        sx={{
+          maxWidth: {
+            xs: '75%',
+            sm: '100%',
+            md: '450px',
+            xl: '100%',
+          },
+        }}>
         <Image src={BigBee} alt='' />
       </Box>
     </Container>

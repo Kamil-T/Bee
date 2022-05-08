@@ -43,7 +43,13 @@ const Faq = () => {
       sx={{
         paddingBottom: { xs: '50px', sm: '80px' },
         paddingTop: { xs: '60px', sm: '90px' },
-        minHeight: { xs: '1120px', sm: '1320px' },
+        minHeight: {
+          xs: '1120px',
+          sm: '1320px',
+          md: '1160px',
+          lg: '1180px',
+          xl: '1320px',
+        },
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -55,7 +61,7 @@ const Faq = () => {
         sx={{
           fontFamily: 'Clash Grotesk',
           fontWeight: '700',
-          fontSize: '64px',
+          fontSize: { xs: '64px', md: '48px', lg: '56px', xl: '64px' },
           color: '#8A4A00',
         }}>
         FAQ
@@ -66,7 +72,7 @@ const Faq = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          maxWidth: '952px',
+          maxWidth: { xs: '952px', md: '80vw', xl: '952px' },
           paddingX: { xs: '20px', sm: '32px' },
           paddingY: '25px',
           marginY: '25px',
@@ -139,7 +145,13 @@ const Faq = () => {
         sx={{
           fontFamily: 'Clash Grotesk',
           fontWeight: '700',
-          fontSize: { xs: '38px', sm: '64px' },
+          fontSize: {
+            xs: '38px',
+            sm: '64px',
+            md: '48px',
+            lg: '56px',
+            xl: '64px',
+          },
           lineHeight: '64px',
           color: '#8A4A00',
           margin: { xs: '50px 0 25px', sm: 'auto 0 25px' },

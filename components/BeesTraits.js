@@ -52,7 +52,7 @@ const BeesTraits = () => {
         flexDirection: { xs: 'column', md: 'row' },
         alignItems: 'center',
         gap: { xs: '50px', md: '0px' },
-        minHeight: { xs: 'false', md: '600px', lg: '997px' },
+        minHeight: { xs: 'false', md: '600px', lg: '57vw', xl: '997px' },
         paddingY: { xs: '50px', lg: '0px' },
         background: '#8A4A00',
         backgroundSize: 'cover',
@@ -64,9 +64,9 @@ const BeesTraits = () => {
         flexDirection='column'
         sx={{
           marginBottom: { xs: '0px', md: '70px' },
-          maxWidth: { xs: '340px', md: '200px', lg: '280px', xl: '340px' },
-          marginRight: { md: '10px', xl: '30px' },
-          marginLeft: { md: '10px' },
+          maxWidth: { xs: '340px', md: '200px', lg: '260px', xl: '340px' },
+          marginRight: { md: '10px', lg: '20px', xl: '30px' },
+          marginLeft: { md: '40px' },
         }}>
         <Typography
           sx={{
@@ -76,7 +76,7 @@ const BeesTraits = () => {
               xs: '20px',
               sm: '16px',
               md: '14px',
-              lg: '20px',
+              lg: '18px',
               xl: '24px',
             },
             color: '#FFC55E',
@@ -92,7 +92,7 @@ const BeesTraits = () => {
               xs: '54px',
               sm: '64px',
               md: '38px',
-              lg: '54px',
+              lg: '50px',
               xl: '64px',
             },
             lineHeight: '80px',
@@ -107,7 +107,7 @@ const BeesTraits = () => {
               xs: '16px',
               sm: '20px',
               md: '14px',
-              lg: '18px',
+              lg: '16px',
               xl: '20px',
             },
             lineHeight: '32px',
@@ -157,8 +157,8 @@ const BeesTraits = () => {
               handleChange('minus')
             }}
             sx={{
-              width: { xs: '65px', md: '50px', lg: '65px' },
-              height: { xs: '65px', md: '50px', lg: '65px' },
+              width: { xs: '65px', md: '50px', lg: '58px', xl: '65px' },
+              height: { xs: '65px', md: '50px', lg: '58px', xl: '65px' },
               transform: 'rotate(90deg)',
               ':hover': {
                 opacity: '0.75',
@@ -188,7 +188,7 @@ const BeesTraits = () => {
                   xs: '6vw',
                   sm: '32px',
                   md: '16px',
-                  lg: '26px',
+                  lg: '24px',
                   xl: '32px',
                 },
                 lineHeight: '32px',
@@ -204,8 +204,8 @@ const BeesTraits = () => {
               handleChange('plus')
             }}
             sx={{
-              width: { xs: '65px', md: '50px', lg: '65px' },
-              height: { xs: '65px', md: '50px', lg: '65px' },
+              width: { xs: '65px', md: '50px', lg: '58px', xl: '65px' },
+              height: { xs: '65px', md: '50px', lg: '58px', xl: '65px' },
               transform: 'rotate(270deg)',
               ':hover': {
                 opacity: '0.75',
@@ -221,7 +221,7 @@ const BeesTraits = () => {
             marginTop: '17px',
             maxWidth: '493px',
             fontFamily: 'Montserrat',
-            fontSize: { xs: '14px', md: '12px', lg: '14px' },
+            fontSize: { xs: '14px', md: '12px', lg: '13px', xl: '14px' },
             fontWeight: '500',
             lineHeight: '24px',
             letterSpacing: '0.01em',
@@ -238,7 +238,8 @@ const BeesTraits = () => {
         gridTemplateRows='repeat(3, 1fr)'
         marginTop='-5px'
         gridColumnGap='5px'
-        gridRowGap='0px'>
+        gridRowGap='0px'
+        sx={{ marginRight: { md: '40px' } }}>
         <Box
           sx={{
             paddingY: { xs: '10px', md: '13px', lg: '15px' },

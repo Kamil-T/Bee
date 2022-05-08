@@ -19,7 +19,7 @@ const BeesUtilities = () => {
       <Container
         maxWidth='false'
         sx={{
-          minHeight: { lg: '1000px', xl: '1158px' },
+          minHeight: { lg: '950px', xl: '1158px' },
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -27,7 +27,8 @@ const BeesUtilities = () => {
           paddingTop: {
             xs: '45px',
             sm: '60px',
-            lg: '100px',
+            md: '75px',
+            lg: '90px',
             xl: '111px',
           },
           zIndex: '5',
@@ -36,10 +37,16 @@ const BeesUtilities = () => {
           sx={{
             fontFamily: 'Clash Grotesk',
             fontWeight: '600',
-            fontSize: { xs: '20px', sm: '24px', md: '22px', lg: '24px' },
+            fontSize: {
+              xs: '20px',
+              sm: '24px',
+              md: '22px',
+              lg: '23px',
+              xl: '24px',
+            },
             lineHeight: '24px',
             color: 'white',
-            marginTop: { xs: '10px', md: '28px' },
+            marginTop: { xs: '10px' },
             marginLeft: '6px',
             letterSpacing: '0.001rem',
           }}>
@@ -49,7 +56,13 @@ const BeesUtilities = () => {
           sx={{
             fontFamily: 'Clash Grotesk',
             fontWeight: '700',
-            fontSize: { xs: '44px', sm: '58px', md: '60px', lg: '64px' },
+            fontSize: {
+              xs: '44px',
+              sm: '58px',
+              md: '60px',
+              lg: '62px',
+              xl: '64px',
+            },
             margin: {
               xs: '16px 0 25px 6px',
               md: '16px 0 50px 6px',
@@ -65,7 +78,7 @@ const BeesUtilities = () => {
           display='flex'
           justifyContent='space-between'
           sx={{
-            maxWidth: { xs: '800px', lg: '1000px' },
+            maxWidth: { xs: '800px', lg: '900px', xl: '1000px' },
             flexDirection: { xs: 'column', md: 'row' },
             gap: { xs: '35px', lg: '70px' },
           }}>
