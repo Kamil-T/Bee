@@ -7,6 +7,7 @@ import { styled, useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
 import Link from '../src/Link'
 import { useState } from 'react'
 import BumbleParty from '../images/BumbleParty.png'
@@ -126,9 +127,10 @@ const Navbar = () => {
             edge='start'
             aria-label='open drawer'
             sx={{ color: '#DB8216' }}>
-            <MenuIcon />
+            {open ? <CloseIcon /> : <MenuIcon />}
           </IconButton>
           <Menu
+            variant='menu'
             id='basic-menu'
             anchorEl={anchorEl}
             open={open}
@@ -154,8 +156,15 @@ const Navbar = () => {
             transformOrigin={{
               vertical: 'top',
               horizontal: 'center',
+            }}
+            sx={{
+              padding: '32px 48px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-end',
+              gap: '25px',
             }}>
-            <MenuList
+            <Box
               sx={{
                 padding: '32px 48px',
                 display: 'flex',
@@ -166,7 +175,7 @@ const Navbar = () => {
                 height: 'calc(97vh - 90px )',
               }}>
               <Links />
-            </MenuList>
+            </Box>
           </Menu>
         </>
       ) : (
