@@ -2,7 +2,7 @@ import Stack from '@mui/material/Stack'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Menu from '@mui/material/Menu'
-import MenuList from '@mui/material/MenuList'
+import MenuItem from '@mui/material/MenuItem'
 import { styled, useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import IconButton from '@mui/material/IconButton'
@@ -15,20 +15,16 @@ import UpperSectionBg from '../images/UpperSectionBg.svg'
 import Image from 'next/image'
 
 const Navbar = () => {
-  const LinkStyled = styled(Link)(({ theme }) => ({
-    all: 'unset',
+  const MenuItemStyled = styled(MenuItem)(({ theme }) => ({
+    justifyContent: 'flex-end',
     fontFamily: 'Montserrat',
     fontWeight: '500',
     paddingLeft: '22px',
     paddingRight: '22px',
     fontSize: '16px',
-    color: 'black',
-    cursor: 'pointer',
-    '&:hover': {
-      textDecoration: 'underline',
-      backgroundColor: 'transparent',
-    },
-    width: 'fit-Content',
+    lineHeight: '36px',
+    width: '150px',
+    marginLeft: 'auto',
 
     [theme.breakpoints.only('md')]: {
       paddingLeft: '16px',
@@ -40,29 +36,38 @@ const Navbar = () => {
       paddingRight: '18px',
       fontSize: '15px',
     },
+    '& a': {
+      all: 'unset',
+      color: 'black',
+      cursor: 'pointer',
+      '& :hover': {
+        textDecoration: 'underline',
+        backgroundColor: 'transparent',
+      },
+    },
   }))
 
   const Links = () => {
     return (
       <>
-        <LinkStyled onClick={handleClose} href='/'>
-          About us
-        </LinkStyled>
-        <LinkStyled onClick={handleClose} href='/'>
-          Yetis
-        </LinkStyled>
-        <LinkStyled onClick={handleClose} href='/'>
-          Story
-        </LinkStyled>
-        <LinkStyled onClick={handleClose} href='/'>
-          Wishlist
-        </LinkStyled>
-        <LinkStyled onClick={handleClose} href='#roadMap'>
-          Roadmap
-        </LinkStyled>
+        <MenuItemStyled onClick={handleClose}>
+          <Link href='/'>About us</Link>
+        </MenuItemStyled>
+        <MenuItemStyled onClick={handleClose}>
+          <Link href='/'>Yetis</Link>
+        </MenuItemStyled>
+        <MenuItemStyled onClick={handleClose}>
+          <Link href='/'>Story</Link>
+        </MenuItemStyled>
+        <MenuItemStyled onClick={handleClose}>
+          <Link href='/'>Wishlist</Link>
+        </MenuItemStyled>
+        <MenuItemStyled onClick={handleClose}>
+          <Link href='#roadMap'>Roadmap</Link>
+        </MenuItemStyled>
         <Button
           sx={{
-            width: { xs: '100%', md: '134px', lg: '146px', xl: '158px' },
+            width: { xs: '95vw', md: '134px', lg: '146px', xl: '158px' },
             height: { xs: '56px', md: '50px', lg: '53px', xl: '56px' },
             background: '#8A4A00',
             borderRadius: '100px',
@@ -141,10 +146,11 @@ const Navbar = () => {
             marginThreshold={0}
             PaperProps={{
               sx: {
+                display: 'flex',
+                width: '100vw',
                 boxShadow: 'none',
                 maxWidth: '100vw',
-                maxHeight: 'calc(100vh - 65px)',
-                height: '100%',
+                height: 'calc(100vh - 60px)',
                 backgroundImage: `url(${UpperSectionBg.src})`,
                 backgroundPosition: 'center -60px',
               },
@@ -153,29 +159,8 @@ const Navbar = () => {
               vertical: 'bottom',
               horizontal: 'center',
             }}
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'center',
-            }}
-            sx={{
-              padding: '32px 48px',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-end',
-              gap: '25px',
-            }}>
-            <Box
-              sx={{
-                padding: '32px 48px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'flex-end',
-                gap: '25px',
-                width: '100vw',
-                height: 'calc(97vh - 90px )',
-              }}>
-              <Links />
-            </Box>
+            sx={{ display: 'flex' }}>
+            <Links />
           </Menu>
         </>
       ) : (
