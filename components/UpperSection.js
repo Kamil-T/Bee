@@ -1,5 +1,5 @@
 import Container from '@mui/material/Container'
-import Navbar from './Navbar'
+import Navbar from './Navbar2'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
@@ -20,7 +20,7 @@ import Twitter from '../images/TwitterIcon.svg'
 import Instagram from '../images/InstagramIcon.svg'
 import styles from '../styles/UpperSection.module.css'
 
-const UpperSection = () => {
+const UpperSection = ({ openMobile, setOpenMobile }) => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up('md'))
 
@@ -41,7 +41,7 @@ const UpperSection = () => {
         backgroundImage: `url(${UpperSectionBg.src})`,
         backgroundPosition: 'center top',
       }}>
-      <Navbar />
+      <Navbar openMobile={openMobile} setOpenMobile={setOpenMobile} />
       <Box
         zIndex='10'
         display='flex'
