@@ -151,13 +151,11 @@ const Navbar = () => {
                 width: '100vw',
                 boxShadow: 'none',
                 maxWidth: '100vw',
-                height: 'calc(100vh - 60px)',
+                height: '93vh',
                 backgroundImage: `url(${UpperSectionBg.src})`,
                 backgroundPosition: 'center -60px',
               },
             }}
-            anchorReference='anchorPosition'
-            anchorPosition={{ top: 60 }}
             anchorOrigin={{
               vertical: 'bottom',
               horizontal: 'center',
