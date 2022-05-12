@@ -147,6 +147,7 @@ const Navbar = () => {
             PaperProps={{
               sx: {
                 display: 'flex',
+                justifyContent: 'center',
                 width: '100vw',
                 boxShadow: 'none',
                 maxWidth: '100vw',
@@ -155,8 +156,14 @@ const Navbar = () => {
                 backgroundPosition: 'center -60px',
               },
             }}
+            anchorReference='anchorPosition'
+            anchorPosition={{ top: 60 }}
             anchorOrigin={{
               vertical: 'bottom',
+              horizontal: 'center',
+            }}
+            transformOrigin={{
+              vertical: 'top',
               horizontal: 'center',
             }}
             sx={{ display: 'flex' }}>
