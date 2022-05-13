@@ -7,16 +7,15 @@ const Links = ({ openMobile, setOpenMobile }) => {
   }
 
   const LinkStyled = styled(Link)(({ theme }) => ({
-    display: 'flex',
-    marginLeft: 'auto',
+    all: 'unset',
+    color: 'black',
+    textAlign: 'end',
     fontFamily: 'Montserrat',
     fontWeight: '500',
     paddingLeft: '22px',
     paddingRight: '22px',
     fontSize: '16px',
     lineHeight: '36px',
-    width: '150px',
-    marginLeft: 'auto',
 
     [theme.breakpoints.only('md')]: {
       paddingLeft: '16px',
@@ -28,10 +27,13 @@ const Links = ({ openMobile, setOpenMobile }) => {
       paddingRight: '18px',
       fontSize: '15px',
     },
-    all: 'unset',
-    color: 'black',
+    [theme.breakpoints.only('xl')]: {
+      paddingLeft: '22px',
+      paddingRight: '22px',
+      fontSize: '16px',
+    },
     cursor: 'pointer',
-    '& :hover': {
+    '&:hover': {
       textDecoration: 'underline',
       backgroundColor: 'transparent',
     },
@@ -56,6 +58,7 @@ const Links = ({ openMobile, setOpenMobile }) => {
       </LinkStyled>
       <Button
         sx={{
+          alignSelf: 'center',
           width: { xs: '95vw', md: '134px', lg: '146px', xl: '158px' },
           height: { xs: '56px', md: '50px', lg: '53px', xl: '56px' },
           background: '#8A4A00',

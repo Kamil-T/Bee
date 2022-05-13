@@ -22,7 +22,7 @@ const Navbar = ({ openMobile, setOpenMobile }) => {
     <AppBar
       position='static'
       sx={{
-        width: '100%',
+        width: '100',
         height: '90px',
         marginBottom: '34px',
         flexDirection: 'row',
@@ -38,6 +38,7 @@ const Navbar = ({ openMobile, setOpenMobile }) => {
       <Box
         sx={{
           maxWidth: { xs: '150px', sm: 'false', md: '140px', xl: 'false' },
+          marginTop: '65px',
           marginRight: 'auto',
           zIndex: '9999',
         }}>

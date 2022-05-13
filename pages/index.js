@@ -1,5 +1,5 @@
-import { Box } from '@mui/material'
 import Container from '@mui/material/Container'
+import Box from '@mui/material/Box'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { useState } from 'react'
@@ -29,8 +29,9 @@ export default function Index() {
         flexDirection: 'column',
       }}>
       {mobile && openMobile ? (
-        <Box
+        <Container
           sx={{
+            height: '100vh',
             backgroundImage: `url(${UpperSectionBg.src})`,
             backgroundPosition: 'center 0px',
           }}>
@@ -38,14 +39,13 @@ export default function Index() {
           <Box
             display='flex'
             flexDirection='column'
-            width='100vw'
+            alignItems='flex-end'
+            width='100%'
             gap='25px'
-            alignItems='center'
-            maxWidth='100vw'
-            height='93vh'>
+            maxWidth='100vw'>
             <Links openMobile={openMobile} setOpenMobile={setOpenMobile} />
           </Box>
-        </Box>
+        </Container>
       ) : (
         <>
           <UpperSection openMobile={openMobile} setOpenMobile={setOpenMobile} />
